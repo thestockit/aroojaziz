@@ -1,0 +1,85 @@
+/* Tailwind Base & Utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* Custom H1 Block Styles */
+block.h1 > * {
+  font-family: var(--font-h1--family);
+  font-style: var(--font-h1--style);
+  font-weight: var(--font-h1--weight);
+  font-size: var(--font-h1--size);
+  line-height: var(--font-h1--line-height);
+  letter-spacing: var(--font-h1--letter-spacing);
+  text-transform: var(--font-h1--case);
+  color: var(--color, var(--font-h1-color));
+}
+
+/* Perspective for 3D Transform Effects */
+.perspective {
+  perspective: 1200px;
+}
+
+.transform-origin-right {
+  transform-origin: right center;
+}
+
+.hover\:rotate-y-flip:hover {
+  transform: rotateY(-180deg) scale(1.1);
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Topbar Layout */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px; /* Top/Bottom & Left/Right padding */
+  background-color: #fff;
+}
+
+.topbar-left,
+.topbar-right {
+  width: 120px; /* Keeps center perfectly aligned */
+}
+
+.topbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+}
+
+.logo {
+  font-size: 28px; /* Logo text size */
+  font-weight: 700;
+  margin: 0; /* Remove default margin */
+  letter-spacing: 2px;
+}
