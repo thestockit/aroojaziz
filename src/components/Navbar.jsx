@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import {
@@ -45,220 +44,84 @@ const Navbar = () => {
           <span className="hidden md:block w-px h-3 bg-gray-300/60" />
 
           <div className="flex items-center gap-7">
-            <a
-              href="https://www.facebook.com/p/Arooj-Aziz-100063690026718/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#171717]"
-            >
-              <FaFacebookF size={13} />
-            </a>
-            <a
-              href="https://www.instagram.com/aroojaziz_/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#171717]"
-            >
-              <FaInstagram size={14} />
-            </a>
-            <a
-              href="https://wa.me/923330601258"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#171717]"
-            >
-              <FaWhatsapp size={15} />
-            </a>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-[#171717]"><FaFacebookF size={13} /></a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-[#171717]"><FaInstagram size={14} /></a>
+            <a href="https://whatsapp.com" target="_blank" rel="noreferrer" className="hover:text-[#171717]"><FaWhatsapp size={15} /></a>
           </div>
         </div>
       </div>
 
-      {/* ================= LOGO & MOBILE TOGGLE ================= */}
+      {/* ================= LOGO ================= */}
       <div className="py-4 px-6 border-b border-gray-100 flex items-center justify-between md:justify-center">
-        <h1 className="text-lg md:text-xl tracking-[5px] font-normal text-[#171717]">
-          AROOJ AZIZ
-        </h1>
-
-        <button
-          className="md:hidden text-[#676869] transition-transform active:scale-90"
-          onClick={() => setMobileMenu(!mobileMenu)}
-        >
+        <h1 className="text-lg md:text-xl tracking-[5px] font-normal text-[#171717]">AROOJ AZIZ</h1>
+        <button className="md:hidden text-[#676869]" onClick={() => setMobileMenu(!mobileMenu)}>
           {mobileMenu ? <FaTimes size={22} /> : <FaBars size={22} />}
         </button>
       </div>
 
-      {/* ================= DESKTOP NAVIGATION ================= */}
+      {/* ================= DESKTOP NAV ================= */}
       <nav className="relative bg-white border-b border-gray-100 hidden md:block">
         <div className="flex items-center justify-center px-6 py-3">
           <ul className="flex items-center gap-14 text-[12px] tracking-[0.2em] font-normal text-[#676869]">
-            <li>
-              <NavLink to="/" className="hover:text-[#171717]">
-                HOME
-              </NavLink>
-            </li>
+            <li><NavLink to="/" className="hover:text-[#171717]">HOME</NavLink></li>
 
-            {/* BRIDAL */}
+            {/* BRIDAL DROPDOWN */}
             <li className="relative group py-1">
-              <NavLink
-                to="/shop"
-                className="hover:text-[#171717] uppercase"
-              >
-                Bridal
-              </NavLink>
-
-              <div className="absolute top-[100%] left-1/2 -translate-x-1/2 w-48 bg-white shadow-[0_15px_35px_rgba(0,0,0,0.08)] border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <NavLink to="/collections/bridal" className="hover:text-[#171717] uppercase">Bridal</NavLink>
+              <div className="absolute top-[100%] left-1/2 -translate-x-1/2 w-48 bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="flex flex-col py-1">
-                  <NavLink
-                    to="/chahatcollection/embroidery/suit"
-                    className={linkStyles}
-                  >
-                    Pearl majesty
-                  </NavLink>
+                  <NavLink to="/collections/bridal/pearl-majesty" className={linkStyles}>Pearl majesty</NavLink>
                   <MenuDivider />
-                  <NavLink
-                    to="/chahatcollection/kids/suit"
-                    className={linkStyles}
-                  >
-                    Rang e ishq
-                  </NavLink>
+                  <NavLink to="/collections/bridal/rang-e-ishq" className={linkStyles}>Rang e ishq</NavLink>
                   <MenuDivider />
-                  <NavLink
-                    to="/chahatcollection/2pc/suit"
-                    className={linkStyles}
-                  >
-                    Shahana
-                  </NavLink>
+                  <NavLink to="/collections/bridal/shahana" className={linkStyles}>Shahana</NavLink>
                 </div>
               </div>
             </li>
 
-            {/* LUXURY PRET */}
+            {/* LUXURY PRET DROPDOWN */}
             <li className="relative group py-1">
-              <span className="hover:text-[#171717] cursor-pointer uppercase">
-                Luxury pret
-              </span>
-
-              <div className="absolute top-[100%] left-1/2 -translate-x-1/2 w-48 bg-white shadow-[0_15px_35px_rgba(0,0,0,0.08)] border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <NavLink to="/collections/luxury-pret" className="hover:text-[#171717] uppercase">Luxury pret</NavLink>
+              <div className="absolute top-[100%] left-1/2 -translate-x-1/2 w-48 bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="flex flex-col py-1">
-                  <NavLink
-                    to="/chahatcollection/allover/suit"
-                    className={linkStyles}
-                  >
-                    Aaira
-                  </NavLink>
+                  <NavLink to="/collections/luxury-pret/aaira" className={linkStyles}>Aaira</NavLink>
                   <MenuDivider />
-                  <NavLink
-                    to="/chahatcollection/kurti&trouser/suit"
-                    className={linkStyles}
-                  >
-                    Wania
-                  </NavLink>
+                  <NavLink to="/collections/luxury-pret/wania" className={linkStyles}>Wania</NavLink>
                 </div>
               </div>
             </li>
 
             {/* FORMAL */}
-            <li>
-              <NavLink
-                to="/chahatcollection/3pc/suit"
-                className="hover:text-[#171717] uppercase"
-              >
-                Formal
-              </NavLink>
-            </li>
+            <li><NavLink to="/collections/formal" className="hover:text-[#171717] uppercase">Formal</NavLink></li>
+
           </ul>
         </div>
       </nav>
 
-      {/* ================= MOBILE MENU ================= */}
+      {/* ================= MOBILE NAV ================= */}
       {mobileMenu && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-2xl md:hidden z-[1000] border-t border-gray-100">
-          <ul className="flex flex-col text-[13px] tracking-widest font-normal text-[#676869]">
-            <NavLink
-              to="/"
-              className="py-4 text-center border-b border-gray-50"
-              onClick={() => setMobileMenu(false)}
-            >
-              Home
-            </NavLink>
+        <div className="absolute top-full left-0 w-full bg-white shadow-2xl md:hidden z-[1000] border-t">
+          <ul className="flex flex-col text-[13px] tracking-widest text-[#676869]">
+            <NavLink to="/" className="py-4 text-center border-b" onClick={() => setMobileMenu(false)}>Home</NavLink>
+            
+            <button onClick={() => setMobileDropdownBridal(!mobileDropdownBridal)} className="py-4 border-b">Bridal</button>
+            {mobileDropdownBridal && (
+              <div className="bg-gray-50 flex flex-col">
+                <NavLink to="/collections/bridal/pearl-majesty" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Pearl Majesty</NavLink>
+                <NavLink to="/collections/bridal/rang-e-ishq" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Rang e Ishq</NavLink>
+                <NavLink to="/collections/bridal/shahana" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Shahana</NavLink>
+              </div>
+            )}
 
-            {/* Bridal Mobile */}
-            <div className="flex flex-col border-b border-gray-50">
-              <button
-                onClick={() =>
-                  setMobileDropdownBridal(!mobileDropdownBridal)
-                }
-                className="py-4 w-full text-center"
-              >
-                Bridal
-              </button>
+            <button onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)} className="py-4 border-b">Luxury Pret</button>
+            {mobileDropdownOpen && (
+              <div className="bg-gray-50 flex flex-col">
+                <NavLink to="/collections/luxury-pret/aaira" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Aaira</NavLink>
+                <NavLink to="/collections/luxury-pret/wania" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Wania</NavLink>
+              </div>
+            )}
 
-              {mobileDropdownBridal && (
-                <div className="bg-gray-50/50 pb-1">
-                  <NavLink
-                    to="/chahatcollection/embroidery/suit"
-                    className="block py-3 text-center"
-                    onClick={() => setMobileMenu(false)}
-                  >
-                    Pearl majesty
-                  </NavLink>
-                  <MenuDivider />
-                  <NavLink
-                    to="/chahatcollection/kids/suit"
-                    className="block py-3 text-center"
-                    onClick={() => setMobileMenu(false)}
-                  >
-                    Rang e ishq
-                  </NavLink>
-                  <MenuDivider />
-                  <NavLink
-                    to="/chahatcollection/2pc/suit"
-                    className="block py-3 text-center"
-                    onClick={() => setMobileMenu(false)}
-                  >
-                    Shahana
-                  </NavLink>
-                </div>
-              )}
-            </div>
-
-            {/* Luxury Pret Mobile */}
-            <div className="flex flex-col border-b border-gray-50">
-              <button
-                onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
-                className="py-4 w-full text-center"
-              >
-                Luxury pret
-              </button>
-
-              {mobileDropdownOpen && (
-                <div className="bg-gray-50/50 pb-1">
-                  <NavLink
-                    to="/chahatcollection/allover/suit"
-                    className="block py-3 text-center"
-                    onClick={() => setMobileMenu(false)}
-                  >
-                    Aaira
-                  </NavLink>
-                  <MenuDivider />
-                  <NavLink
-                    to="/chahatcollection/kurti&trouser/suit"
-                    className="block py-3 text-center"
-                    onClick={() => setMobileMenu(false)}
-                  >
-                    Wania
-                  </NavLink>
-                </div>
-              )}
-            </div>
-
-            <NavLink
-              to="/chahatcollection/3pc/suit"
-              className="py-4 text-center"
-              onClick={() => setMobileMenu(false)}
-            >
-              Formal
-            </NavLink>
+            <NavLink to="/collections/formal" className="py-4 text-center" onClick={() => setMobileMenu(false)}>Formal</NavLink>
           </ul>
         </div>
       )}

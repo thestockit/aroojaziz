@@ -1,200 +1,194 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Thumbs, FreeMode } from 'swiper/modules';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import { products } from '../components/QuickView/ProductsData';
+import { products } from '../data/products'; 
+import SizeGuidePopup from '../components/SizeGuidePopup';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
 import 'swiper/css/free-mode';
 
 const ProductDetail = () => {
-  const { id } = useParams();
-  const product = products.find((p) => p.id === parseInt(id));
+  const { slug } = useParams();
+  const navigate = useNavigate();
+  const product = products.find((p) => p.slug === slug);
 
-  // State management
   const [activeImgIndex, setActiveImgIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState('S');
-  const [selectedSleeve, setSelectedSleeve] = useState('Without Sleeves');
-  
-  // Refs for swiper synchronization
+  const [isSizeGuideOpen, setIsSizeGuideOpen] = useState(false);
   const mainSwiperRef = useRef(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [id]);
+  }, [slug]);
 
-  if (!product) {
-    return (
-      <div className="min-h-[60vh] flex items-center justify-center">
-        <p className="text-sm uppercase tracking-widest text-gray-400">Product Not Found</p>
-      </div>
-    );
-  }
+  if (!product) return <div className="py-20 text-center font-serif uppercase tracking-widest">Product Not Found</div>;
+
+  const isBridal = product.category === 'bridal';
 
   return (
-    <div className="min-h-screen bg-white pb-20">
+    <div className="min-h-screen bg-white pb-20 pt-4">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
         
-        {/* Breadcrumbs (Desktop) */}
-        <nav className="hidden md:flex py-8 text-[10px] uppercase tracking-[0.2em] text-gray-400">
-          Home &nbsp;/&nbsp; {product.name}
-        </nav>
+        {/* Responsive Breadcrumbs */}
+        <div className="flex justify-between items-center py-4 md:py-6 text-[10px] md:text-[11px] uppercase tracking-widest text-gray-400">
+          <nav className="flex flex-wrap gap-1">
+            Home &nbsp;›&nbsp; {product.category} &nbsp;›&nbsp; <span className="text-gray-900 font-medium">{product.name}</span>
+          </nav>
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 xl:gap-24 pt-6 lg:pt-0">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           
-          {/* LEFT: IMAGE GALLERY SECTION (Synchronized Sliders) */}
-          <div className="lg:col-span-7 flex flex-col space-y-4">
-            
-            {/* 1. Main Swipable Image */}
-            <div className="relative aspect-[3/4] bg-[#f9f9f9] overflow-hidden group">
-              <Swiper
-                onSwiper={(swiper) => (mainSwiperRef.current = swiper)}
-                onSlideChange={(swiper) => setActiveImgIndex(swiper.activeIndex)}
-                modules={[Navigation, Thumbs]}
-                className="h-full w-full"
-                grabCursor={true}
-              >
-                {product.images.map((img, i) => (
-                  <SwiperSlide key={i}>
-                    <img 
-                      src={img} 
-                      className="w-full h-full object-cover select-none" 
-                      alt={`${product.name} view ${i}`} 
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+          {/* LEFT: IMAGE GALLERY (Fixed Gallery Issue) */}
+          <div className="lg:col-span-7 w-full">
+            <div className="lg:sticky lg:top-28">
+              <div className="relative aspect-[3/4] overflow-hidden bg-[#f9f9f9]">
+                <Swiper
+                  onSwiper={(swiper) => (mainSwiperRef.current = swiper)}
+                  onSlideChange={(swiper) => setActiveImgIndex(swiper.activeIndex)}
+                  modules={[Navigation]}
+                  className="h-full w-full"
+                >
+                  {product.images.map((img, i) => (
+                    <SwiperSlide key={i}>
+                      <img src={img} className="w-full h-full object-cover" alt={product.name} />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                
+                {/* Desktop Navigation Arrows */}
+                <button onClick={() => mainSwiperRef.current?.slidePrev()} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 bg-white/50 hover:bg-white rounded-full hidden md:block transition-all">
+                  <FiChevronLeft size={20}/>
+                </button>
+                <button onClick={() => mainSwiperRef.current?.slideNext()} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 bg-white/50 hover:bg-white rounded-full hidden md:block transition-all">
+                  <FiChevronRight size={20}/>
+                </button>
+              </div>
 
-              {/* Navigation Arrows (Desktop Only) */}
-              <button 
-                onClick={() => mainSwiperRef.current?.slidePrev()}
-                className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/10 p-4 hover:bg-white/40 transition-all hidden md:block z-20"
-              >
-                <FiChevronLeft size={24} />
-              </button>
-              <button 
-                onClick={() => mainSwiperRef.current?.slideNext()}
-                className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/10 p-4 hover:bg-white/40 transition-all hidden md:block z-20"
-              >
-                <FiChevronRight size={24} />
-              </button>
-            </div>
-
-            {/* 2. Thumbnail Swiper */}
-            <div className="w-full">
-              <Swiper
-                modules={[FreeMode]}
-                spaceBetween={10}
-                slidesPerView={4.5}
-                freeMode={true}
-                watchSlidesProgress={true}
-                breakpoints={{
-                  768: { slidesPerView: 5.5 },
-                  1024: { slidesPerView: 6.5 }
-                }}
-                className="thumbnail-swiper"
-              >
+              {/* Thumbnail Bar for Mobile & Desktop */}
+              <div className="flex gap-2 mt-4 overflow-x-auto no-scrollbar">
                 {product.images.map((img, idx) => (
-                  <SwiperSlide key={idx}>
-                    <button 
-                      onClick={() => {
-                        setActiveImgIndex(idx);
-                        mainSwiperRef.current?.slideTo(idx);
-                      }}
-                      className={`w-full aspect-[3/4] border transition-all duration-300 ${
-                        activeImgIndex === idx ? 'border-black opacity-100' : 'border-transparent opacity-60'
-                      }`}
-                    >
-                      <img src={img} className="w-full h-full object-cover" alt="" />
-                    </button>
-                  </SwiperSlide>
+                  <button 
+                    key={idx} 
+                    onClick={() => mainSwiperRef.current?.slideTo(idx)}
+                    className={`w-16 md:w-20 aspect-[3/4] flex-shrink-0 border-2 transition-all ${activeImgIndex === idx ? 'border-black' : 'border-transparent opacity-60'}`}
+                  >
+                    <img src={img} className="w-full h-full object-cover" alt="" />
+                  </button>
                 ))}
-              </Swiper>
+              </div>
             </div>
           </div>
 
-          {/* RIGHT: PRODUCT INFO SECTION */}
-          <div className="lg:col-span-5 flex flex-col space-y-8 lg:pt-4 pb-12">
-            <header className="space-y-3 border-b border-gray-100 pb-8">
-              <h1 className="text-2xl md:text-3xl font-serif tracking-tight text-[#1a1a1a] uppercase leading-snug">
-                {product.name}
-              </h1>
-              <p className="text-xl font-light text-[#1a1a1a]">Rs {product.price}</p>
-            </header>
+          {/* RIGHT: CONTENT SECTION */}
+          <div className="lg:col-span-5 flex flex-col text-left space-y-6 md:space-y-8">
+            <h1 className="text-3xl md:text-5xl font-serif text-[#1a1a1a] leading-tight">{product.name}</h1>
+            
+            {/* Conditional Price: Optional for Bridal */}
+            <p className="text-lg md:text-xl text-[#1a1a1a] font-light">Rs {product.price}</p>
 
-            <div className="space-y-10">
-              {/* Size Selection */}
-              <div className="space-y-4">
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-900">Size</p>
-                <div className="flex flex-wrap gap-2 sm:gap-3">
-                  {['XS', 'S', 'M', 'L', 'XL'].map(s => (
-                    <button 
-                      key={s} 
-                      onClick={() => setSelectedSize(s)}
-                      className={`w-12 h-10 sm:w-14 sm:h-12 border text-[11px] transition-all duration-300 ${
-                        selectedSize === s ? 'border-black bg-black text-white' : 'border-gray-200 hover:border-black'
-                      }`}
-                    >
-                      {s}
-                    </button>
-                  ))}
+            {/* BRIDAL LAYOUT: Exact In-Line Buttons */}
+            {isBridal ? (
+              <div className="flex flex-col sm:flex-row gap-3 pt-6 pb-2 border-t border-gray-100">
+                <button className="flex-1 py-3.5 border border-black text-[9px] md:text-[10px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition uppercase">
+                  BOOK AN APPOINTMENT
+                </button>
+                <button className="flex-1 py-3.5 border border-black text-[9px] md:text-[10px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition uppercase">
+                  TALK TO FASHION CONSULTANT
+                </button>
+              </div>
+            ) : (
+              /* GENERAL LAYOUT: Stacked E-commerce Buttons */
+              <div className="space-y-6 md:space-y-8 pt-6 border-t border-gray-100">
+                <button 
+                  onClick={() => setIsSizeGuideOpen(true)}
+                  className="bg-[#1e2d3b] text-white px-8 md:px-10 py-3 text-[10px] font-bold tracking-widest uppercase hover:bg-black transition"
+                >
+                  SIZE GUIDE
+                </button>
+
+                <div className="space-y-3">
+                  <p className="text-[11px] font-bold uppercase tracking-widest text-gray-500">Size</p>
+                  <div className="flex flex-wrap gap-2">
+                    {['XS', 'S', 'M', 'L', 'XL'].map(s => (
+                      <button key={s} onClick={() => setSelectedSize(s)} className={`w-12 md:w-14 h-10 md:h-11 border text-[11px] transition-all ${selectedSize === s ? 'border-black bg-black text-white' : 'border-gray-200 text-gray-400 hover:border-black'}`}>{s}</button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                   <p className="text-[11px] font-bold uppercase tracking-widest text-gray-500">Quantity</p>
+                   <div className="flex items-center border border-gray-200 w-fit">
+                    <button onClick={() => setQuantity(Math.max(1, quantity - 1))} className="px-4 py-2 hover:bg-gray-50 border-r border-gray-200">–</button>
+                    <div className="px-5 text-sm font-medium">{quantity}</div>
+                    <button onClick={() => setQuantity(quantity + 1)} className="px-4 py-2 hover:bg-gray-50 border-l border-gray-200">+</button>
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-3 pt-4">
+                  <button className="w-full border border-black py-4 text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-gray-50 transition">ADD TO CART</button>
+                  <button className="w-full bg-[#1e2d3b] text-white py-4 text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-black transition">BUY IT NOW</button>
                 </div>
               </div>
+            )}
 
-              {/* Sleeve Style Selection */}
-              <div className="space-y-4">
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-900">Sleeve Style</p>
-                <div className="flex flex-wrap gap-2">
-                  {['Without Sleeves', 'With Sleeves', 'Spaghetti Straps'].map(style => (
-                    <button 
-                      key={style} 
-                      onClick={() => setSelectedSleeve(style)}
-                      className={`px-4 py-2 sm:px-6 sm:py-3 border text-[10px] uppercase tracking-widest transition-all duration-300 ${
-                        selectedSleeve === style ? 'border-black text-black' : 'border-gray-100 text-gray-400 hover:border-black'
-                      }`}
-                    >
-                      {style}
-                    </button>
-                  ))}
-                </div>
-              </div>
+            {/* PRODUCT DETAILS */}
+            <div className="space-y-6 md:space-y-8 pt-8 border-t border-gray-100">
+               <div>
+                  <p className="text-[11px] font-bold uppercase tracking-widest mb-2">Color</p>
+                  <div className="px-5 py-2 border border-gray-400 w-fit text-[13px] uppercase tracking-wider">
+                    {product.colors?.[0] || 'Default'}
+                  </div>
+               </div>
 
-              {/* Quantity Selector */}
-              <div className="space-y-4">
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-900">Quantity</p>
-                <div className="flex items-center border border-gray-200 w-fit bg-white">
-                  <button onClick={() => setQuantity(Math.max(1, quantity - 1))} className="px-6 py-2 sm:py-3 hover:bg-gray-50 border-r border-gray-200">–</button>
-                  <div className="w-12 sm:w-16 text-center text-sm font-medium">{quantity}</div>
-                  <button onClick={() => setQuantity(quantity + 1)} className="px-6 py-2 sm:py-3 hover:bg-gray-50 border-l border-gray-200">+</button>
-                </div>
-              </div>
-            </div>
+               {product.fabricDetails && (
+                 <div className="space-y-3">
+                    <p className="text-[11px] font-bold uppercase tracking-widest">Product Details:</p>
+                    <ul className="text-[13px] md:text-[14px] text-gray-600 space-y-2 font-light list-disc list-inside ml-1 leading-relaxed">
+                       {Object.entries(product.fabricDetails).map(([key, val]) => (
+                         <li key={key} className="capitalize">{val}</li>
+                       ))}
+                    </ul>
+                 </div>
+               )}
 
-            {/* CTA Buttons */}
-            <div className="space-y-4 pt-6">
-              <button className="w-full border border-black py-4 sm:py-5 text-[10px] font-bold tracking-[0.3em] hover:bg-black hover:text-white transition-all duration-500 uppercase">
-                ADD TO CART
-              </button>
-              <button className="w-full bg-[#1e2d3b] text-white py-4 sm:py-5 text-[10px] font-bold tracking-[0.3em] hover:bg-black transition-all duration-500 uppercase">
-                BUY IT NOW
-              </button>
-            </div>
+               <div className="space-y-3">
+                  <p className="text-[11px] font-bold uppercase tracking-widest text-gray-900">Description</p>
+                  <p className="text-[14px] md:text-[15px] text-gray-600 leading-relaxed font-light">{product.description}</p>
+               </div>
 
-            {/* Description */}
-            <div className="pt-10 border-t border-gray-100 space-y-4">
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-900">Description</p>
-              <div className="text-[13px] text-gray-600 leading-relaxed font-light space-y-4">
-                <p>{product.description}</p>
-              </div>
+               {product.shippingTime && (
+                 <p className="text-[12px] font-bold uppercase tracking-widest">
+                   Shipping Time: <span className="font-light normal-case text-gray-500 ml-2">{product.shippingTime}</span>
+                 </p>
+               )}
             </div>
           </div>
         </div>
+
+        {/* YOU MAY ALSO LIKE */}
+        <div className="mt-20 md:mt-32 pt-16 md:pt-24 border-t border-gray-100">
+          <h2 className="text-xl md:text-2xl font-serif text-center uppercase tracking-[0.4em] md:tracking-[0.5em] mb-12 md:mb-16">
+            You May Also Like
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-8 gap-y-10 md:gap-y-12">
+            {products.filter(p => p.category === product.category && p.slug !== product.slug).slice(0, 4).map((item) => (
+              <div key={item.id} className="group cursor-pointer text-center" onClick={() => navigate(`/product/${item.slug}`)}>
+                <div className="aspect-[3/4] overflow-hidden bg-[#f9f9f9] mb-4 md:mb-5">
+                   <img src={item.images[0]} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt={item.name} />
+                </div>
+                <h3 className="text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-gray-500 font-light mb-1 px-2 line-clamp-1">{item.name}</h3>
+                <p className="text-xs md:text-sm font-medium text-gray-900">Rs {item.price}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
+
+      <SizeGuidePopup isOpen={isSizeGuideOpen} onClose={() => setIsSizeGuideOpen(false)} />
     </div>
   );
 };

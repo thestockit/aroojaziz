@@ -8,16 +8,16 @@ const ProductCard = ({ product, onQuickView }) => {
   const navigate = useNavigate();
 
   const handleCardClick = () => {
-    // Navigates to the product detail page
-    navigate(`/product/${product.id}`);
+    // ✅ FIX: Changed from ${product.id} to ${product.slug}
+    // This matches your App.js route: { path: "product/:slug" }
+    navigate(`/product/${product.slug}`);
   };
 
   return (
     <div className="group relative flex flex-col items-center bg-white cursor-pointer">
       <div className="relative w-full aspect-[2/3] overflow-hidden bg-[#f4f4f4]">
         
-        {/* 1. Added a transparent overlay for mobile clicks. 
-               This ensures the redirect works even if Swiper blocks touch events. */}
+        {/* Mobile Click Overlay */}
         <div 
           className="absolute inset-0 z-10 md:hidden" 
           onClick={handleCardClick}
@@ -26,7 +26,6 @@ const ProductCard = ({ product, onQuickView }) => {
         <Swiper
           modules={[Navigation]}
           nested={true}
-          // 2. Disable internal image swiping on mobile to allow page scroll
           allowTouchMove={false} 
           navigation={{ 
             nextEl: `.next-${product.id}`, 
@@ -47,7 +46,6 @@ const ProductCard = ({ product, onQuickView }) => {
             </SwiperSlide>
           ))}
           
-          {/* Navigation Arrows: md:flex ensures they only appear on desktop */}
           <button 
             onClick={(e) => e.stopPropagation()} 
             className={`prev-${product.id} absolute left-0 top-1/2 z-20 -translate-y-1/2 bg-white/40 p-2 opacity-0 transition-opacity group-hover:opacity-100 hidden md:flex hover:bg-white/60`}
@@ -62,7 +60,6 @@ const ProductCard = ({ product, onQuickView }) => {
           </button>
         </Swiper>
 
-        {/* Quick View Button: Desktop Only */}
         <button 
           onClick={(e) => {
             e.stopPropagation();
@@ -79,7 +76,7 @@ const ProductCard = ({ product, onQuickView }) => {
         className="mt-4 text-center w-full" 
         onClick={handleCardClick}
       >
-        <h3 className="text-[13px] text-[#707070] font-light uppercase tracking-wide mb-1">
+        <h3 className="text-[13px] text-[#707070] font-light uppercase tracking-wide mb-1 px-2 line-clamp-1">
           {product.name}
         </h3>
         <p className="text-[14px] font-medium text-[#1a1a1a]">
