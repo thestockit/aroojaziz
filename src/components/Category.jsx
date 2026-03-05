@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import img1 from "../assets/shop/gulab.webp";
-import img2 from "../assets/shop/lal12.webp";
-import img3 from "../assets/shop/black-dress.webp";
+import img1 from "../assets/bridal.jpg";
+import img2 from "../assets/pret.jpg";
+import img3 from "../assets/formal.jpg";
 
 const categories = [
   { img: img1, title: "Bridals", link: "/shop" },

@@ -11,7 +11,6 @@ import mobile1 from "../assets/mobile-1.png";
 import mobile2 from "../assets/banner-new-again.webp";
 
 import Category from "../components/Category";
-// import BestSeller from "../components/BestSeller"; // We replace this with our new Grid
 import TextImage from "../components/TextImage";
 import VideoSection from "../components/VideoSection";
 
@@ -73,9 +72,8 @@ const Home = () => {
         </div>
       </section>
 
-      <VideoSection />
       <TextImage />
-
+      <VideoSection />
       {/* WhatsApp Floating Button */}
       <a
         href={`https://wa.me/923108067450`}
