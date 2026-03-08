@@ -92,14 +92,28 @@ const ProductDetail = () => {
 
             {/* BRIDAL LAYOUT: Exact In-Line Buttons */}
             {isBridal ? (
-              <div className="flex flex-col sm:flex-row gap-3 pt-6 pb-2 border-t border-gray-100">
-                <button className="flex-1 py-3.5 border border-black text-[9px] md:text-[10px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition uppercase">
-                  BOOK AN APPOINTMENT
-                </button>
-                <button className="flex-1 py-3.5 border border-black text-[9px] md:text-[10px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition uppercase">
-                  TALK TO FASHION CONSULTANT
-                </button>
-              </div>
+<div className="flex flex-col sm:flex-row gap-3 pt-6 pb-2 border-t border-gray-100">
+  <a 
+    href="https://wa.me/923330601258?text=Hi%20I%20would%20like%20to%20book%20an%20appointment" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="flex-1"
+  >
+    <button className="w-full py-3.5 border border-black text-[9px] md:text-[10px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition uppercase">
+      BOOK AN APPOINTMENT
+    </button>
+  </a>
+  <a 
+    href="https://wa.me/923330601258?text=Hi%20I%20need%20fashion%20consultation" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="flex-1"
+  >
+    <button className="w-full py-3.5 border border-black text-[9px] md:text-[10px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition uppercase">
+      TALK TO FASHION CONSULTANT
+    </button>
+  </a>
+</div>
             ) : (
               /* GENERAL LAYOUT: Stacked E-commerce Buttons */
               <div className="space-y-6 md:space-y-8 pt-6 border-t border-gray-100">
@@ -128,11 +142,7 @@ const ProductDetail = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-3 pt-4">
-                  <button className="w-full border border-black py-4 text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-gray-50 transition">ADD TO CART</button>
-                  <button className="w-full bg-[#1e2d3b] text-white py-4 text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-black transition">BUY IT NOW</button>
-                </div>
-              </div>
+             </div>
             )}
 
             {/* PRODUCT DETAILS */}

@@ -46,18 +46,20 @@ const Navbar = () => {
           <div className="flex items-center gap-7">
             <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-[#171717]"><FaFacebookF size={13} /></a>
             <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-[#171717]"><FaInstagram size={14} /></a>
-            <a href="https://whatsapp.com" target="_blank" rel="noreferrer" className="hover:text-[#171717]"><FaWhatsapp size={15} /></a>
+            <a href="https://wa.me/923330601258?text=Hi%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" rel="noreferrer" className="hover:text-[#171717]"><FaWhatsapp size={15} /></a>
           </div>
         </div>
       </div>
 
-      {/* ================= LOGO ================= */}
-      <div className="py-4 px-6 border-b border-gray-100 flex items-center justify-between md:justify-center">
-        <h1 className="text-lg md:text-xl tracking-[5px] font-normal text-[#171717]">AROOJ AZIZ</h1>
-        <button className="md:hidden text-[#676869]" onClick={() => setMobileMenu(!mobileMenu)}>
-          {mobileMenu ? <FaTimes size={22} /> : <FaBars size={22} />}
-        </button>
-      </div>
+{/* ================= LOGO ================= */}
+<div className="py-4 px-6 border-b border-gray-100 flex items-center justify-between md:justify-center">
+  <a href="/" className="hover:opacity-80 transition-opacity">
+    <h1 className="text-lg md:text-xl tracking-[5px] font-normal text-[#171717]">AROOJ AZIZ</h1>
+  </a>
+  <button className="md:hidden text-[#676869]" onClick={() => setMobileMenu(!mobileMenu)}>
+    {mobileMenu ? <FaTimes size={22} /> : <FaBars size={22} />}
+  </button>
+</div>
 
       {/* ================= DESKTOP NAV ================= */}
       <nav className="relative bg-white border-b border-gray-100 hidden md:block">

@@ -57,7 +57,7 @@ const TextImage = () => {
             </h2>
 
             <div className="pt-2">
-              <a href="/shop" className="group">
+              <a href="/collections/luxury-pret" className="group">
                 <button className="px-12 py-3 border border-black text-black text-[10px] tracking-[0.2em] uppercase font-normal transition-all duration-300 group-hover:bg-black group-hover:text-white">
                   SHOP NOW
                 </button>

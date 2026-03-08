@@ -32,17 +32,17 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/chahatcollection/embroidery/suit" className="hover:text-[#171717] transition-colors duration-300">
+              <Link to="/collections/bridal" className="hover:text-[#171717] transition-colors duration-300">
                 Bridal
               </Link>
             </li>
             <li>
-              <Link to="/chahatcollection/allover/suit" className="hover:text-[#171717] transition-colors duration-300">
+              <Link to="/collections/luxury-pret" className="hover:text-[#171717] transition-colors duration-300">
                 Luxury pret
               </Link>
             </li>
             <li>
-              <Link to="/chahatcollection/3pc/suit" className="hover:text-[#171717] transition-colors duration-300">
+              <Link to="/collections/formal" className="hover:text-[#171717] transition-colors duration-300">
                 Formal
               </Link>
             </li>

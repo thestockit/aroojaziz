@@ -5,9 +5,9 @@ import img2 from "../assets/pret.jpg";
 import img3 from "../assets/formal.jpg";
 
 const categories = [
-  { img: img1, title: "Bridals", link: "/shop" },
-  { img: img2, title: "Luxury Pret", link: "/chahatcollection/kurti&trouser/suit" },
-  { img: img3, title: "Formal", link: "/chahatcollection/3pc/suit" },
+  { img: img1, title: "Bridals", link: "/collections/bridal" },
+  { img: img2, title: "Luxury Pret", link: "collections/luxury-pret" },
+  { img: img3, title: "Formal", link: "collections/formal" },
 ];
 
 const Category = () => {
