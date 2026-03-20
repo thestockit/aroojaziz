@@ -31,6 +31,7 @@ const Home = () => {
   const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length);
   const prevSlide = () => setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
 
+const velvetProducts = products.filter((p) => p.category === "velvet");
   return (
     <>
       {/* Banner Section */}
@@ -73,6 +74,19 @@ const Home = () => {
       </section>
 
       <TextImage />
+
+      {/* 2. VELVET COLLECTION SECTION (Placed below TextImage) */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-center text-3xl font-serif uppercase tracking-[0.2em] mb-12">
+            The Velvet Collection
+          </h2>
+          
+          {/* We pass only the velvetProducts here */}
+          <ProductGrid products={velvetProducts} />
+        </div>
+      </section>
+
       <VideoSection />
       {/* WhatsApp Floating Button */}
       <a

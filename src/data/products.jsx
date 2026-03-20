@@ -191,6 +191,28 @@ import tangerine7 from "../assets/Formal/Tangerine/7.jpg";
 import tangerine8 from "../assets/Formal/Tangerine/8.jpg";
 import tangerine9 from "../assets/Formal/Tangerine/9.jpg";
 
+
+
+// ==========================================
+// VELVET COLLECTION IMPORTS
+// ==========================================
+
+// --- IMPERIAL (10 images) ---
+import imperial1 from "../assets/Velvet/Imperial/1.jpeg";
+
+
+// --- CRIMSON (10 images) ---
+import crimson1 from "../assets/Velvet/Crimson/1.jpeg";
+
+
+// --- MISTERO (10 images) ---
+import mistero1 from "../assets/Velvet/Mistero/1.jpeg";
+
+
+// --- SCINTILLA (10 images) ---
+import scintilla1 from "../assets/Velvet/Scintilla/1.jpeg";
+
+
 // ==========================================
 // 2. MASTER PRODUCTS ARRAY
 // ==========================================
@@ -640,5 +662,49 @@ export const products = [
     },
     customization: "For Customization please contact our Fashion consultant.",
     note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
+  },
+  {
+    id: 31,
+    slug: "imperial-olive-velvet",
+    name: "IMPERIAL",
+    category: "velvet",
+    // We list all 10 here:
+    images: [imperial1,imperial1,imperial1,imperial1,imperial1,imperial1,imperial1,imperial1,imperial1,imperial1],
+    description: "An upstyle olive green outfit which consists of a velvet long shirt hand embellished with dull gold zardosi work. Organza dupatta has beautiful stitching details using lappa and kiran.",
+    colors: ["Olive Green"],
+    fabricDetails: { Shirt: "Velvet", Dupatta: "Organza", Shararah: "Crushed Medium Silk" },
+  },
+
+  {
+    id: 32,
+    slug: "crimson-red-velvet",
+    name: "CRIMSON",
+    category: "velvet",
+    images: [crimson1,crimson1,crimson1,crimson1,crimson1,crimson1,crimson1,crimson1,crimson1,crimson1],
+    description: "A crimson red long shirt made on pure french velvet beautifully hand crafted using zardosi embroidery, reham work blended with swarovski, diamonties, resham and cut dana.",
+    colors: ["Crimson Red"],
+    fabricDetails: { Shirt: "French Velvet", Culottes: "Tissue Silk", Dupatta: "Organza" },
+  },
+
+  {
+    id: 33,
+    slug: "mistero-black-velvet",
+    name: "MISTERO",
+    category: "velvet",
+    images: [mistero1,mistero1,mistero1,mistero1,mistero1,mistero1,mistero1,mistero1,mistero1,mistero1],
+    description: "A black velvet kaftan hand embellished using sequin, crystals and dori work. The classy silhouette and fine fabric makes it upchic and regal.",
+    colors: ["Black"],
+    fabricDetails: { Kaftan: "Velvet" },
+  },
+
+  {
+    id: 34,
+    slug: "scintilla-ruby-red-velvet",
+    name: "SCINTILLA",
+    category: "velvet",
+    images: [scintilla1,scintilla1,scintilla1,scintilla1,scintilla1,scintilla1,scintilla1,scintilla1,scintilla1,scintilla1],
+    description: "A velvet kaftan embellished using intricate dori work technique, swarovski, crystals and beads. Trendy silhouette makes the attire majestic.",
+    colors: ["Ruby Red"],
+    fabricDetails: { Kaftan: "Velvet" },
   },
 ];
