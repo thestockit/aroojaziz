@@ -102,31 +102,125 @@ import airaRed8 from "../assets/AAIRA/Red/8.jpg";
 import airaRed9 from "../assets/AAIRA/Red/9.jpg";
 import airaRed10 from "../assets/AAIRA/Red/10.jpg";
 
-// --- LUXURY PRET: WANIA ---
-import waniaBlackMain from "../assets/3pc/black-dress.webp";
-import waniaBlack2 from "../assets/3pc/dark-suit.webp";
-import waniaBlackBack from "../assets/3pc/back-black.webp";
+// ==========================================
+// 1. IMAGE IMPORTS (WANIA COLLECTION)
+// ==========================================
 
-import redElegance from "../assets/3pc/red-suit.webp";
-import red2 from "../assets/3pc/hot2.webp";
-import red3 from "../assets/3pc/hot3.webp";
+// --- JET BLACK (10 Images) ---
+import jb1 from "../assets/Wania/Jet-Black/1.webp";
+import jb2 from "../assets/Wania/Jet-Black/2.webp";
+import jb3 from "../assets/Wania/Jet-Black/3.webp";
+import jb4 from "../assets/Wania/Jet-Black/4.webp";
+import jb5 from "../assets/Wania/Jet-Black/5.webp";
+import jb6 from "../assets/Wania/Jet-Black/6.webp";
+import jb7 from "../assets/Wania/Jet-Black/7.webp";
+import jb8 from "../assets/Wania/Jet-Black/8.webp";
+import jb9 from "../assets/Wania/Jet-Black/9.webp";
+import jb10 from "../assets/Wania/Jet-Black/10.webp";
 
-import waniaMagenta from "../assets/3pc/megenta.webp";
-import waniaMagenta2 from "../assets/3pc/magenta2.webp";
-import waniaMagenta3 from "../assets/3pc/magenta3.webp";
+// --- HOT PINK (10 Images) ---
+import hp1 from "../assets/Wania/Hot-Pink/1.webp";
+import hp2 from "../assets/Wania/Hot-Pink/2.webp";
+import hp3 from "../assets/Wania/Hot-Pink/3.webp";
+import hp4 from "../assets/Wania/Hot-Pink/4.webp";
+import hp5 from "../assets/Wania/Hot-Pink/5.webp";
+import hp6 from "../assets/Wania/Hot-Pink/6.webp";
+import hp7 from "../assets/Wania/Hot-Pink/7.webp";
+import hp8 from "../assets/Wania/Hot-Pink/8.webp";
+import hp9 from "../assets/Wania/Hot-Pink/9.webp";
+import hp10 from "../assets/Wania/Hot-Pink/10.webp";
 
-import waniaZinc from "../assets/3pc/gresh-suit.webp";
-import waniaZinc2 from "../assets/3pc/zinc_2.webp";
-import waniaZinc3 from "../assets/3pc/zinc_3.webp";
+// --- MAGENTA (10 Images) ---
+import m1 from "../assets/Wania/Magenta/1.webp";
+import m2 from "../assets/Wania/Magenta/2.webp";
+import m3 from "../assets/Wania/Magenta/3.webp";
+import m4 from "../assets/Wania/Magenta/4.webp";
+import m5 from "../assets/Wania/Magenta/5.webp";
+import m6 from "../assets/Wania/Magenta/6.webp";
+import m7 from "../assets/Wania/Magenta/7.webp";
+import m8 from "../assets/Wania/Magenta/8.webp";
+import m9 from "../assets/Wania/Magenta/9.webp";
+import m10 from "../assets/Wania/Magenta/10.webp";
 
-import waniaNavy from "../assets/3pc/navia-blue.webp";
-import waniaNavy2 from "../assets/3pc/blue2.webp";
-import waniaNavy3 from "../assets/3pc/blue3.webp";
+// --- ZINC (10 Images) ---
+import z1 from "../assets/Wania/Zinc/1.webp";
+import z2 from "../assets/Wania/Zinc/2.webp";
+import z3 from "../assets/Wania/Zinc/3.webp";
+import z4 from "../assets/Wania/Zinc/4.webp";
+import z5 from "../assets/Wania/Zinc/5.webp";
+import z6 from "../assets/Wania/Zinc/6.webp";
+import z7 from "../assets/Wania/Zinc/7.webp";
+import z8 from "../assets/Wania/Zinc/8.webp";
+import z9 from "../assets/Wania/Zinc/9.webp";
+import z10 from "../assets/Wania/Zinc/10.webp";
 
-import waniaWhite from "../assets/3pc/Wania-white.webp";
-import waniaWhite2 from "../assets/3pc/white2.webp";
-import waniaWhite3 from "../assets/3pc/white3.webp";
+// --- JET BLACK 2 (8 Images) ---
+import jb2_1 from "../assets/Wania/Jet-Black-2/1.webp";
+import jb2_2 from "../assets/Wania/Jet-Black-2/2.webp";
+import jb2_3 from "../assets/Wania/Jet-Black-2/3.webp";
+import jb2_4 from "../assets/Wania/Jet-Black-2/4.webp";
+import jb2_5 from "../assets/Wania/Jet-Black-2/5.webp";
+import jb2_6 from "../assets/Wania/Jet-Black-2/6.webp";
+import jb2_7 from "../assets/Wania/Jet-Black-2/7.webp";
+import jb2_8 from "../assets/Wania/Jet-Black-2/8.webp";
 
+// --- NAVY BLUE (9 Images) ---
+import nb1 from "../assets/Wania/Navy-Blue/1.webp";
+import nb2 from "../assets/Wania/Navy-Blue/2.webp";
+import nb3 from "../assets/Wania/Navy-Blue/3.webp";
+import nb4 from "../assets/Wania/Navy-Blue/4.webp";
+import nb5 from "../assets/Wania/Navy-Blue/5.webp";
+import nb6 from "../assets/Wania/Navy-Blue/6.webp";
+import nb7 from "../assets/Wania/Navy-Blue/7.webp";
+import nb8 from "../assets/Wania/Navy-Blue/8.webp";
+import nb9 from "../assets/Wania/Navy-Blue/9.webp";
+
+// --- MAGENTA 2 (10 Images) ---
+import m2_1 from "../assets/Wania/Magenta-2/1.webp";
+import m2_2 from "../assets/Wania/Magenta-2/2.webp";
+import m2_3 from "../assets/Wania/Magenta-2/3.webp";
+import m2_4 from "../assets/Wania/Magenta-2/4.webp";
+import m2_5 from "../assets/Wania/Magenta-2/5.webp";
+import m2_6 from "../assets/Wania/Magenta-2/6.webp";
+import m2_7 from "../assets/Wania/Magenta-2/7.webp";
+import m2_9 from "../assets/Wania/Magenta-2/9.webp";
+import m2_10 from "../assets/Wania/Magenta-2/10.webp";
+
+// --- OLIVE GREEN (10 Images) ---
+import og1 from "../assets/Wania/Olive-Green/1.webp";
+import og2 from "../assets/Wania/Olive-Green/2.webp";
+import og3 from "../assets/Wania/Olive-Green/3.webp";
+import og4 from "../assets/Wania/Olive-Green/4.webp";
+import og5 from "../assets/Wania/Olive-Green/5.webp";
+import og6 from "../assets/Wania/Olive-Green/6.webp";
+import og7 from "../assets/Wania/Olive-Green/7.webp";
+import og8 from "../assets/Wania/Olive-Green/8.webp";
+import og9 from "../assets/Wania/Olive-Green/9.webp";
+import og10 from "../assets/Wania/Olive-Green/10.webp";
+
+// --- ROSE GOLD (10 Images) ---
+import rg1 from "../assets/Wania/Rose-Gold/1.webp";
+import rg2 from "../assets/Wania/Rose-Gold/2.webp";
+import rg3 from "../assets/Wania/Rose-Gold/3.webp";
+import rg4 from "../assets/Wania/Rose-Gold/4.webp";
+import rg5 from "../assets/Wania/Rose-Gold/5.webp";
+import rg6 from "../assets/Wania/Rose-Gold/6.webp";
+import rg7 from "../assets/Wania/Rose-Gold/7.webp";
+import rg8 from "../assets/Wania/Rose-Gold/8.webp";
+import rg9 from "../assets/Wania/Rose-Gold/9.webp";
+import rg10 from "../assets/Wania/Rose-Gold/10.webp";
+
+// --- OFF WHITE (10 Images) ---
+import ow1 from "../assets/Wania/Off-White/1.webp";
+import ow2 from "../assets/Wania/Off-White/2.webp";
+import ow3 from "../assets/Wania/Off-White/3.webp";
+import ow4 from "../assets/Wania/Off-White/4.webp";
+import ow5 from "../assets/Wania/Off-White/5.webp";
+import ow6 from "../assets/Wania/Off-White/6.webp";
+import ow7 from "../assets/Wania/Off-White/7.webp";
+import ow8 from "../assets/Wania/Off-White/8.webp";
+import ow9 from "../assets/Wania/Off-White/9.webp";
+import ow10 from "../assets/Wania/Off-White/10.webp";
 // --- FORMAL COLLECTIONS ---
 // FORMAL COLLECTIONS (UPDATED)
 // ==========================================
@@ -493,31 +587,7 @@ export const products = [
   customization: "For Customization please contact our Fashion consultant.",
   note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
 },
-  // --- LUXURY PRET: WANIA ---
-  {
-    id: 8,
-    slug: "wania-jet-black-luxury",
-    name: "Wania | Jet Black 2",
-    price: "48,000",
-    category: "luxury-pret",
-    subcategory: "wania",
-    images: [waniaBlackMain, waniaBlack2, waniaBlackBack],
-    description: "Floor length maxi made of crinkle chiffon embellished in an A-symmetrical pattern using crystals and swarovski.",
-    colors: ["Jet Black"],
-    fabricDetails: { Gown: "Crinkle Chiffon", Shirt: "Grip Silk", Pants: "Korean Raw Silk" },
-  },
-  {
-    id: 9,
-    slug: "wania-off-white-elegance",
-    name: "Wania | Off-white",
-    price: "45,000",
-    category: "luxury-pret",
-    subcategory: "wania",
-    images: [waniaWhite, waniaWhite2, waniaWhite3],
-    description: "Elegance redefined in white with intricate floral embroidery and ruffled organza dupatta.",
-    colors: ["Off White"],
-    fabricDetails: { Shirt: "Organza", Pants: "Korean Raw Silk", Dupatta: "Organza" },
-  },
+
 
   // --- FORMAL ---
 // --- FORMAL: SURKH AFSANA (NEW) ---
@@ -707,4 +777,134 @@ export const products = [
     colors: ["Ruby Red"],
     fabricDetails: { Kaftan: "Velvet" },
   },
+  {
+    id: 40,
+    slug: "wania-jet-black-maxi",
+    name: "WANIA | Jet Black",
+    price: "14,000",
+    category: "luxury-pret",
+    subcategory: "wania",
+    images: [jb1, jb2, jb3, jb4, jb5, jb6, jb7, jb8, jb9, jb10],
+    description: "Elegance redefined in our stunning black dress with silver embellishments. Floor length maxi made of crinkle chiffon is embellished beautifully in an A-symmetrical pattern using crystals and swarovski. The maxi comes with a grip silk under shirt and cigarette pants.",
+    colors: ["Jet Black"],
+    fabricDetails: { Gown: "Crinkle Chiffon", "Under Shirt": "Grip Silk", Pants: "Korean Raw Silk" },
+    customization: "Available"
+  },
+  {
+    id: 41,
+    slug: "wania-hot-pink-sharara",
+    name: "WANIA | Hot Pink",
+    price: "20,000",
+    category: "luxury-pret",
+    subcategory: "wania",
+    images: [hp1, hp2, hp3, hp4, hp5, hp6, hp7, hp8, hp9, hp10],
+    description: "A symphony of pinks, with a hint of silver and a dash of elegance, this attire consists of a flairy georgette top with sheer neckline which is hand embellished with pearls and swarovski and a sharara with swarovski chan.",
+    colors: ["Hot Pink"],
+    fabricDetails: { TOP: "Georgette", SHARARA: "Georgette" },
+    customization: "Available"
+  },
+  {
+    id: 42,
+    slug: "wania-magenta-drop-gown",
+    name: "WANIA | Magenta",
+    price: "15,000",
+    category: "luxury-pret",
+    subcategory: "wania",
+    images: [m1, m2, m3, m4, m5, m6, m7, m8, m9, m10],
+    description: "Add a touch of sophistication to your wardrobe with this classy magenta side drop gown. Featuring intricate gold embroidery and a flowing design. The stunning silhouette makes it up class and sophistically modern.",
+    colors: ["Magenta"],
+    fabricDetails: { Fabric: "Chiffon" },
+    customization: "Available"
+  },
+  {
+    id: 43,
+    slug: "wania-zinc-teal-shirt",
+    name: "WANIA | Zinc",
+    price: "15,000",
+    category: "luxury-pret",
+    subcategory: "wania",
+    images: [z1, z2, z3, z4, z5, z6, z7, z8, z9, z10],
+    description: "This teal attire with gold embroidery is a must-have for any fashionista’s wardrobe. Front open floor length shirt is beautifully hand embellished with swarovski and pearls. It comes with a plain pant and dupatta.",
+    colors: ["Zinc"],
+    fabricDetails: { Shirt: "Tassel Silk", Pants: "Korean Raw Silk" },
+    customization: "Available"
+  },
+  {
+    id: 44,
+    slug: "wania-jet-black-2-silk",
+    name: "WANIA | Jet Black 2",
+    price: "15,000",
+    category: "luxury-pret",
+    subcategory: "wania",
+    images: [jb2_1, jb2_2, jb2_3, jb2_4, jb2_5, jb2_6, jb2_7, jb2_8],
+    description: "Black beauty adorned with vibrant embroidery! This sleek long silk shirt with sheer neckline is a fresh yet classic attire to elevate your style. Vibrate floral embroidery gives a fresh summer vibe. The shirt is paired with plain cigarette pants and chiffon dupatta.",
+    colors: ["Jet Black"],
+    fabricDetails: { Shirt: "Katan Silk", Pants: "Korean Raw Silk", Dupatta: "Crinkle Chiffon" },
+    customization: "Available"
+  },
+  {
+    id: 45,
+    slug: "wania-navy-blue-pishwas",
+    name: "WANIA | Navy Blue",
+    price: "15,000",
+    category: "luxury-pret",
+    subcategory: "wania",
+    images: [nb1, nb2, nb3, nb4, nb5, nb6, nb7, nb8, nb9],
+    description: "A dress that speaks for itself. This blue dress is a piece of art, a masterpiece of fashion. Blue raw silk pishwas beautifully hand embellished with zardosi and resham work is paired with a raw silk Lehnga with intricate borders and chiffon dupatta with handwork on pallu.",
+    colors: ["Navy Blue"],
+    fabricDetails: { Pishwas: "Pure Raw Silk", Lengha: "Pure Raw Silk", Dupatta: "Crinkle Chiffon" },
+    customization: "Available"
+  },
+  {
+    id: 46,
+    slug: "wania-magenta-2-gharara",
+    name: "WANIA | Magenta 2",
+    price: "15,000",
+    category: "luxury-pret",
+    subcategory: "wania",
+    images: [m2_1, m2_2, m2_3, m2_4, m2_5, m2_6, m2_7, m2_9, m2_10],
+    description: "A classic design with a modern twist, this magenta gharara set with gold hand embellishment is sure to turn heads. Chiffon shirt is beautifully hand embellished using tilla, gotta, nakhshi, beads and swarovski.",
+    colors: ["Magenta"],
+    fabricDetails: { Shirt: "Crinkle Chiffon", Gharara: "Tassel Silk", Dupatta: "Printed Organza" },
+    customization: "Available"
+  },
+  {
+    id: 47,
+    slug: "wania-olive-green-sharara",
+    name: "WANIA | Olive Green",
+    price: "14,000",
+    category: "luxury-pret",
+    subcategory: "wania",
+    images: [og1, og2, og3, og4, og5, og6, og7, og8, og9, og10],
+    description: "Elevate your formal wear game with this gorgeous olive green sharara outfit, perfect for making a statement at any event. Intricate hand embellished shirt is blended with crushed sharara with unique stitching details.",
+    colors: ["Olive Green"],
+    fabricDetails: { Shirt: "Pure Raw Silk", Sharara: "Crushed Medium Silk", Dupatta: "Organza" },
+    customization: "Available"
+  },
+  {
+    id: 48,
+    slug: "wania-rose-gold-sharara",
+    name: "WANIA | Rose Gold",
+    price: "14,000",
+    category: "luxury-pret",
+    subcategory: "wania",
+    images: [rg1, rg2, rg3, rg4, rg5, rg6, rg7, rg8, rg9, rg10],
+    description: "Elegance meets sophistication in this stunning rose gold sharara outfit, perfect for formal events and weddings. Intricate hand embellishments, eye pleasing colour palette makes the attire a class apart.",
+    colors: ["Rose Gold"],
+    fabricDetails: { Shirt: "Organza", Sharara: "Organza", Dupatta: "Organza" },
+    customization: "Available"
+  },
+  {
+    id: 49,
+    slug: "wania-off-white-organza",
+    name: "WANIA | Off-White",
+    price: "13,000",
+    category: "luxury-pret",
+    subcategory: "wania",
+    images: [ow1, ow2, ow3, ow4, ow5, ow6, ow7, ow8, ow9, ow10],
+    description: "Elegance redefined in white, with intricate floral embroidery and a touch of traditional charm. Eye pleasing hues of embroidery blended with off white base make the shirt a treat to eyes. Ruffled organza dupatta adds modern charm and style.",
+    colors: ["Off White"],
+    fabricDetails: { Shirt: "Organza", Pants: "Korean Raw Silk", Dupatta: "Organza" },
+    customization: "Available"
+  }
 ];
