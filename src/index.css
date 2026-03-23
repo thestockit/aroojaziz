@@ -1,119 +1,92 @@
-/* Tailwind Base & Utilities */
+/* 1. Import Fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 2. Tailwind Base & Utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Global Styles */
-body {
-  margin: 0;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* 3. Global Base Styles */
+@layer base {
+  body {
+    margin: 0;
+    /* Default Content Font (Jost) */
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #707173; /* Standard Product Name & Price color */
+    background-color: #ffffff;
+    text-align: center; /* Matching the reference site alignment */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: normal;
+  }
+
+  /* 4. Section Headings (e.g., "New Arrivals") */
+  h1, h2, h3, .new-arrival-heading {
+    font-family: 'EB Garamond', serif !important;
+    font-size: 24px;
+    color: #171717; /* High contrast for headings */
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: none; /* Reference site keeps case natural */
+    margin-bottom: 1.5rem;
+  }
+
+  /* 5. Links & Buttons (Usually use Jost) */
+  a, button {
+    font-family: 'Jost', sans-serif;
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
-code {
-  font-family:
-    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+/* 6. Product Specific Classes (Use these in your Components) */
+
+/* Apply this to your Product Name <h3> or <p> */
+.product-name {
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  color: #707173;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 10px;
 }
 
-/* Custom H1 Block Styles */
-block.h1 > * {
-  font-family: var(--font-h1--family);
-  font-style: var(--font-h1--style);
-  font-weight: var(--font-h1--weight);
-  font-size: var(--font-h1--size);
-  line-height: var(--font-h1--line-height);
-  letter-spacing: var(--font-h1--letter-spacing);
-  text-transform: var(--font-h1--case);
-  color: var(--color, var(--font-h1-color));
+/* Apply this to your Price <span> or <p> */
+.product-price {
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  color: #707173;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 5px;
 }
 
-/* Perspective for 3D Transform Effects */
+/* 7. Existing Layout & Animation Logic (Preserved) */
 .perspective {
   perspective: 1200px;
 }
 
-.transform-origin-right {
-  transform-origin: right center;
-}
-
-.hover\:rotate-y-flip:hover {
-  transform: rotateY(-180deg) scale(1.1);
-}
-
-/* Slide-in Animation */
 @keyframes slideIn {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
 }
 
 .animate-slideIn {
   animation: slideIn 0.3s ease-out;
 }
 
-/* Topbar Layout */
-.topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px 10px; /* Top/Bottom & Left/Right padding */
-  background-color: #fff;
-}
-
-.topbar-left,
-.topbar-right {
-  width: 120px; /* Keeps center perfectly aligned */
-}
-
-.topbar-center {
-  flex: 1;
-  display: flex;
-  justify-content: center; /* Center horizontally */
-}
-
 .logo {
-  font-size: 28px; /* Logo text size */
+  font-family: 'EB Garamond', serif;
+  font-size: 28px;
   font-weight: 700;
-  margin: 0; /* Remove default margin */
+  color: #171717;
   letter-spacing: 2px;
 }
 
-h1,
-.h1-style,
-h2,
-h3,
-h4,
-h5,
-h6,
-.heading-font {
-  font-family: "EB Garamond", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-h1,
-.h1-style,
-h2,
-h3,
-h4,
-h5,
-h6,
-.heading-font {
-  font-family:
-    EB Garamond,
-    serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.container,
-.container-fluid {
+/* Resetting container paddings */
+.container, .container-fluid {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }

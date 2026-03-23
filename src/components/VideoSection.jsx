@@ -5,7 +5,7 @@ const VideoSection = () => {
 
   return (
     /* py-16 sm:py-20 maintains symmetrical padding consistent with other sections */
-    <section className="w-full bg-white py-16 sm:py-20">
+    <section className="w-full bg-white pt-16 pb-0 sm:py-20">
       
       {/* CONTAINER: 
           Mobile: h-[400px] to h-[500px] is standard for editorial videos.
@@ -29,13 +29,7 @@ const VideoSection = () => {
           playsInline
         />
 
-        {/* CLEAN OVERLAY (No icons) */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none bg-black/5">
-          {/* Subtle Branding Watermark */}
-          <h2 className="text-white text-[10px] sm:text-xs tracking-[0.6em] uppercase font-light opacity-50">
-            Arooj Aziz
-          </h2>
-        </div>
+       
       </div>
     </section>
   );

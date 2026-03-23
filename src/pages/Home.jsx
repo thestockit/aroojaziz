@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 // 1. IMPORT THE NEW COMPONENTS
 import ProductGrid from "../components/QuickView/ProductGrid";
@@ -31,7 +32,9 @@ const Home = () => {
   const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length);
   const prevSlide = () => setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
 
-const velvetProducts = products.filter((p) => p.category === "velvet");
+  // Velvet filter from your data
+  const velvetProducts = products.filter((p) => p.category === "velvet");
+
   return (
     <>
       {/* Banner Section */}
@@ -57,37 +60,48 @@ const velvetProducts = products.filter((p) => p.category === "velvet");
 
       <Category />
 
-      {/* 2. REPLACED BESTSELLER WITH THE NEW QUICKVIEW GRID */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-center text-3xl font-serif uppercase tracking-[0.2em] mb-12">
-            Best Sellers
-          </h2>
-          
-          {/* This component now handles:
-              - Internal card sliders (Desktop hover)
-              - Quick View "Slide Down" animation
-              - Mobile clean view (arrows/quickview hidden)
-          */}
-          <ProductGrid products={products} />
-        </div>
-      </section>
+{/* BEST SELLERS SECTION */}
+<section className="py-20 bg-white">
+  <div className="container mx-auto px-4 text-center">
+    <div className="mb-12">
+      <h2 className="text-[24px] font-heading font-normal text-[#171717] mb-2">
+        Best Sellers
+      </h2>
+      <Link 
+        to="/collections/luxury-pret"
+        className="text-[11.25px] font-body font-medium uppercase tracking-[0.2em] text-[#C16452] underline underline-offset-[6px] decoration-[1px] hover:opacity-80 transition-opacity"
+      >
+        View All
+      </Link>
+    </div>
+    
+    <ProductGrid products={products} />
+  </div>
+</section>
 
       <TextImage />
 
-      {/* 2. VELVET COLLECTION SECTION (Placed below TextImage) */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-center text-3xl font-serif uppercase tracking-[0.2em] mb-12">
-            The Velvet Collection
-          </h2>
-          
-          {/* We pass only the velvetProducts here */}
-          <ProductGrid products={velvetProducts} />
-        </div>
-      </section>
+ {/* VELVET COLLECTION SECTION */}
+<section className="py-20 bg-white">
+  <div className="container mx-auto px-4 text-center">
+    <div className="mb-12">
+      <h2 className="text-[24px] font-heading font-normal text-[#171717] mb-2">
+        The Velvet Collection
+      </h2>
+      <Link 
+        to="/collections/luxury-pret" 
+        className="text-[11.25px] font-body font-medium uppercase tracking-[0.2em] text-[#C16452] underline underline-offset-[6px] decoration-[1px] hover:opacity-80 transition-opacity"
+      >
+        View All
+      </Link>
+    </div>
+    
+    <ProductGrid products={velvetProducts} />
+  </div>
+</section>
 
       <VideoSection />
+      
       {/* WhatsApp Floating Button */}
       <a
         href={`https://wa.me/923108067450`}

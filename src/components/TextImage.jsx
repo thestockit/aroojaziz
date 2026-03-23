@@ -52,9 +52,12 @@ const TextImage = () => {
             viewport={{ once: true }}
             className="flex flex-col items-center md:items-center text-center w-full md:w-[45%]"
           >
-            <h2 className="text-2xl md:text-3xl font-serif tracking-widest text-gray-900 mb-8">
-            Luxury Pret
-            </h2>
+            <h2 
+           className="text-2xl md:text-3xl font-medium tracking-normal text-gray-900 mb-8 uppercase" 
+           style={{ fontFamily: "'EB Garamond', serif" }}
+           >
+           Luxury Pret
+           </h2>
 
             <div className="pt-2">
               <a href="/collections/luxury-pret" className="group">

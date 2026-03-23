@@ -4,15 +4,16 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="px-6 py-16 mt-20 bg-[#f7f1f0]">
+    /* Removed mt-20 and reduced pt to close the gap with the video section */
+    <footer className="px-6 pt-10 pb-16 bg-[#f7f1f0] relative z-10">
       <div className="mx-auto max-w-[1000px] grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
         
-        {/* About Us */}
-        <div className="md:col-span-2 flex flex-col space-y-6 pr-0 md:pr-12">
+        {/* About Us - Centered on mobile, Left-aligned on desktop */}
+        <div className="md:col-span-2 flex flex-col space-y-6 pr-0 md:pr-12 text-center md:text-left">
           <h2 className="text-[14px] tracking-[0.2em] text-[#171717] font-normal uppercase">
             About us
           </h2>
-          <p className="text-[15px] leading-[1.8] text-[#676869] font-normal">
+          <p className="text-[15px] leading-[1.8] text-[#676869] font-normal px-4 md:px-0">
             The house of Arooj Aziz is synonymous with sophistication and
             elegance. Imbued with a time-honoured aesthetic and inimitable
             artistry the brand stands as an icon of our gloriously regal
@@ -20,8 +21,8 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Quick Links */}
-        <div className="flex flex-col space-y-6">
+        {/* Quick Links - Centered on mobile */}
+        <div className="flex flex-col space-y-6 text-center md:text-left">
           <h2 className="text-[14px] tracking-[0.2em] text-[#171717] font-normal uppercase">
             Quick links
           </h2>
@@ -49,12 +50,12 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Social Links */}
-        <div className="flex flex-col space-y-6 md:items-end">
+        {/* Social Links - Centered on mobile, Right-aligned on desktop */}
+        <div className="flex flex-col space-y-6 items-center md:items-end text-center">
           <h2 className="text-[14px] tracking-[0.2em] text-[#171717] font-normal uppercase">
             Follow us
           </h2>
-          <div className="flex gap-6">
+          <div className="flex gap-8 md:gap-6">
             <a
               href="https://www.facebook.com/p/Arooj-Aziz-100063690026718/"
               target="_blank"
@@ -84,8 +85,8 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="mt-20 pt-10 border-t border-gray-200/60 text-center">
-        <p className="text-[12px] tracking-[0.3em] text-[#676869] font-normal uppercase opacity-80">
+      <div className="mt-16 pt-8 border-t border-gray-200/60 text-center">
+        <p className="text-[11px] tracking-[0.3em] text-[#676869] font-normal uppercase opacity-80">
           © {new Date().getFullYear()} Arooj Aziz. All rights reserved.
         </p>
       </div>

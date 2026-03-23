@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import logoImg from '../assets/logo.png';
 import {
   FaInstagram,
   FaFacebookF,
@@ -51,19 +52,19 @@ const Navbar = () => {
         </div>
       </div>
 
-{/* ================= LOGO ================= */}
-<div className="py-4 px-6 border-b border-gray-100 flex items-center justify-between md:justify-center">
-  <a href="/" className="hover:opacity-80 transition-opacity">
-    <h1 className="text-lg md:text-xl tracking-[5px] font-normal text-[#171717]">AROOJ AZIZ</h1>
-  </a>
-  <button className="md:hidden text-[#676869]" onClick={() => setMobileMenu(!mobileMenu)}>
-    {mobileMenu ? <FaTimes size={22} /> : <FaBars size={22} />}
-  </button>
-</div>
+      {/* ================= LOGO ================= */}
+      <div className="pt-6 pb-0 px-6 border-b border-gray-100 flex items-center justify-between md:justify-center">
+      <a href="/" className="hover:opacity-80 transition-opacity">
+      <h1 className="text-lg md:text-xl tracking-[5px] font-normal text-[#171717]">AROOJ AZIZ</h1>
+      </a>
+      <button className="md:hidden text-[#676869]" onClick={() => setMobileMenu(!mobileMenu)}>
+      {mobileMenu ? <FaTimes size={22} /> : <FaBars size={22} />}
+      </button>
+      </div>
 
       {/* ================= DESKTOP NAV ================= */}
       <nav className="relative bg-white border-b border-gray-100 hidden md:block">
-        <div className="flex items-center justify-center px-6 py-3">
+        <div className="flex items-center justify-center px-6 pt-2 py-4">
           <ul className="flex items-center gap-14 text-[12px] tracking-[0.2em] font-normal text-[#676869]">
             <li><NavLink to="/" className="hover:text-[#171717]">HOME</NavLink></li>
 
@@ -89,6 +90,8 @@ const Navbar = () => {
                   <NavLink to="/collections/luxury-pret/aaira" className={linkStyles}>Aaira</NavLink>
                   <MenuDivider />
                   <NavLink to="/collections/luxury-pret/wania" className={linkStyles}>Wania</NavLink>
+                  <MenuDivider />
+                  <NavLink to="/collections/luxury-pret/velvet" className={linkStyles}>Velvet</NavLink>
                 </div>
               </div>
             </li>
@@ -120,6 +123,7 @@ const Navbar = () => {
               <div className="bg-gray-50 flex flex-col">
                 <NavLink to="/collections/luxury-pret/aaira" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Aaira</NavLink>
                 <NavLink to="/collections/luxury-pret/wania" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Wania</NavLink>
+                <NavLink to="/collections/luxury-pret/velvet" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Velvet</NavLink>
               </div>
             )}
 

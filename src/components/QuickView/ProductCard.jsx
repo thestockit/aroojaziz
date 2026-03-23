@@ -8,8 +8,6 @@ const ProductCard = ({ product, onQuickView }) => {
   const navigate = useNavigate();
 
   const handleCardClick = () => {
-    // ✅ FIX: Changed from ${product.id} to ${product.slug}
-    // This matches your App.js route: { path: "product/:slug" }
     navigate(`/product/${product.slug}`);
   };
 
@@ -60,26 +58,30 @@ const ProductCard = ({ product, onQuickView }) => {
           </button>
         </Swiper>
 
+        {/* Quick View Button - Clean Jost Style */}
         <button 
           onClick={(e) => {
             e.stopPropagation();
             onQuickView(product);
           }}
-          className="absolute bottom-4 left-1/2 z-30 w-[90%] -translate-x-1/2 translate-y-[130%] bg-white/95 py-3 text-[11px] font-bold tracking-[0.2em] transition-all duration-300 group-hover:translate-y-0 hidden md:block shadow-sm uppercase"
+          className="absolute bottom-4 left-1/2 z-30 w-[90%] -translate-x-1/2 translate-y-[130%] bg-white/95 py-3 text-[11px] font-medium tracking-[0.2em] transition-all duration-300 group-hover:translate-y-0 hidden md:block shadow-sm uppercase text-[#171717]"
         >
           QUICK VIEW
         </button>
       </div>
 
-      {/* Info Section */}
+      {/* Info Section - Matches Faiza Saqlain Specs */}
       <div 
-        className="mt-4 text-center w-full" 
+        className="mt-4 text-center w-full pb-4" 
         onClick={handleCardClick}
       >
-        <h3 className="text-[13px] text-[#707070] font-light uppercase tracking-wide mb-1 px-2 line-clamp-1">
+        {/* Product Name: Jost, 14px, #707173 */}
+        <h3 className="text-[14px] text-[#707173] font-normal uppercase tracking-normal mb-1 px-2 line-clamp-1">
           {product.name}
         </h3>
-        <p className="text-[14px] font-medium text-[#1a1a1a]">
+        
+        {/* Price: Jost, 14px, #707173 */}
+        <p className="text-[14px] font-normal text-[#707173]">
           Rs {product.price}
         </p>
       </div>
