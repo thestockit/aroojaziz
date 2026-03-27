@@ -602,6 +602,7 @@ export const products = [
   {
     id: 32,
     slug: "crimson-red-velvet",
+    name: "Crimson",
     category: "luxury-pret",
     subcategory: "velvet",
     images: [crimson1, crimson2, crimson3, crimson4, crimson5, crimson6, crimson7, crimson8, crimson9, crimson10],
