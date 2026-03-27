@@ -102,10 +102,6 @@ import airaRed8 from "../assets/AAIRA/Red/8.jpg";
 import airaRed9 from "../assets/AAIRA/Red/9.jpg";
 import airaRed10 from "../assets/AAIRA/Red/10.jpg";
 
-// ==========================================
-// 1. IMAGE IMPORTS (WANIA COLLECTION)
-// ==========================================
-
 // --- JET BLACK (10 Images) ---
 import jb1 from "../assets/Wania/Jet-Black/1.webp";
 import jb2 from "../assets/Wania/Jet-Black/2.webp";
@@ -221,9 +217,6 @@ import ow7 from "../assets/Wania/Off-White/7.webp";
 import ow8 from "../assets/Wania/Off-White/8.webp";
 import ow9 from "../assets/Wania/Off-White/9.webp";
 import ow10 from "../assets/Wania/Off-White/10.webp";
-// --- FORMAL COLLECTIONS ---
-// FORMAL COLLECTIONS (UPDATED)
-// ==========================================
 
 // --- BAHAAR (12 images) ---
 import bahaar1 from "../assets/Formal/Bahaar/1.jpg";
@@ -285,27 +278,53 @@ import tangerine7 from "../assets/Formal/Tangerine/7.jpg";
 import tangerine8 from "../assets/Formal/Tangerine/8.jpg";
 import tangerine9 from "../assets/Formal/Tangerine/9.jpg";
 
-
-
-// ==========================================
-// VELVET COLLECTION IMPORTS
-// ==========================================
-
 // --- IMPERIAL (10 images) ---
-import imperial1 from "../assets/Velvet/Imperial/1.jpeg";
-
+import imperial1 from "../assets/Velvet/Imperial/1.webp";
+import imperial2 from "../assets/Velvet/Imperial/2.webp";
+import imperial3 from "../assets/Velvet/Imperial/3.webp";
+import imperial4 from "../assets/Velvet/Imperial/4.webp";
+import imperial5 from "../assets/Velvet/Imperial/5.webp";
+import imperial6 from "../assets/Velvet/Imperial/6.webp";
+import imperial7 from "../assets/Velvet/Imperial/7.webp";
+import imperial8 from "../assets/Velvet/Imperial/8.webp";
+import imperial9 from "../assets/Velvet/Imperial/9.webp";
+import imperial10 from "../assets/Velvet/Imperial/10.webp";
 
 // --- CRIMSON (10 images) ---
-import crimson1 from "../assets/Velvet/Crimson/1.jpeg";
-
+import crimson1 from "../assets/Velvet/Crimson/1.webp";
+import crimson2 from "../assets/Velvet/Crimson/2.webp";
+import crimson3 from "../assets/Velvet/Crimson/3.webp";
+import crimson4 from "../assets/Velvet/Crimson/4.webp";
+import crimson5 from "../assets/Velvet/Crimson/5.webp";
+import crimson6 from "../assets/Velvet/Crimson/6.webp";
+import crimson7 from "../assets/Velvet/Crimson/7.webp";
+import crimson8 from "../assets/Velvet/Crimson/8.webp";
+import crimson9 from "../assets/Velvet/Crimson/9.webp";
+import crimson10 from "../assets/Velvet/Crimson/10.webp";
 
 // --- MISTERO (10 images) ---
-import mistero1 from "../assets/Velvet/Mistero/1.jpeg";
-
+import mistero1 from "../assets/Velvet/Mistero/1.webp";
+import mistero2 from "../assets/Velvet/Mistero/2.webp";
+import mistero3 from "../assets/Velvet/Mistero/3.webp";
+import mistero4 from "../assets/Velvet/Mistero/4.webp";
+import mistero5 from "../assets/Velvet/Mistero/5.webp";
+import mistero6 from "../assets/Velvet/Mistero/6.webp";
+import mistero7 from "../assets/Velvet/Mistero/7.webp";
+import mistero8 from "../assets/Velvet/Mistero/8.webp";
+import mistero9 from "../assets/Velvet/Mistero/9.webp";
+import mistero10 from "../assets/Velvet/Mistero/10.webp";
 
 // --- SCINTILLA (10 images) ---
-import scintilla1 from "../assets/Velvet/Scintilla/1.jpeg";
-
+import scintilla1 from "../assets/Velvet/Scintilla/1.webp";
+import scintilla2 from "../assets/Velvet/Scintilla/2.webp";
+import scintilla3 from "../assets/Velvet/Scintilla/3.webp";
+import scintilla4 from "../assets/Velvet/Scintilla/4.webp";
+import scintilla5 from "../assets/Velvet/Scintilla/5.webp";
+import scintilla6 from "../assets/Velvet/Scintilla/6.webp";
+import scintilla7 from "../assets/Velvet/Scintilla/7.webp";
+import scintilla8 from "../assets/Velvet/Scintilla/8.webp";
+import scintilla9 from "../assets/Velvet/Scintilla/9.webp";
+import scintilla10 from "../assets/Velvet/Scintilla/10.webp";
 
 // ==========================================
 // 2. MASTER PRODUCTS ARRAY
@@ -317,7 +336,6 @@ export const products = [
     id: 1,
     slug: "shahana-bridal-red",
     name: "SHAHANA",
-    price: "450,000",
     category: "bridal",
     subcategory: "shahana",
     images: [shahanaMain, shahana2, shahana3],
@@ -333,7 +351,6 @@ export const products = [
     id: 2,
     slug: "rang-e-ishq-velvet",
     name: "RANG E ISHQ",
-    price: "385,000",
     category: "bridal",
     subcategory: "rang-e-ishq",
     images: [rangeIshqMain, rangeIshq2, rangeIshq3],
@@ -349,7 +366,6 @@ export const products = [
     id: 3,
     slug: "pearl-majesty-white",
     name: "PEARL MAJESTY",
-    price: "425,000",
     category: "bridal",
     subcategory: "pearl-majesty",
     images: [pearlMain],
@@ -364,9 +380,8 @@ export const products = [
     id: 4,
     slug: "anarkali-traditional-pishwas",
     name: "ANARKALI",
-    price: "320,000",
     category: "bridal",
-    subcategory: "shahana", // Grouped under sub-menu as per Navbar context
+    subcategory: "shahana",
     images: [anarkaliMain, anarkali2, anarkali3],
     description: "A breathtaking traditional bridal attire. Korean net pishwas with detailed hand embroidery using marori work techniques blended with an atlas Lehnga.",
     colors: ["Gold Bottle Green"],
@@ -377,7 +392,6 @@ export const products = [
     id: 5,
     slug: "tabeer-exquisite-bridal",
     name: "TABEER",
-    price: "350,000",
     category: "bridal",
     subcategory: "shahana",
     images: [tabeerMain, tabeer2, tabeer3],
@@ -388,402 +402,241 @@ export const products = [
   },
 
   // --- LUXURY PRET: AAIRA ---
-  // ==========================================
-// LUXURY PRET: AAIRA COLLECTION
-// ==========================================
-
-// --- AAIRA | Pink (ID: 14) ---
-{
-  id: 23,
-  slug: "aaira-pink",
-  name: "AAIRA | Pink",
-  price: "42,500",
-  category: "luxury-pret",
-  subcategory: "aaira",
-  images: [
-    airaPink1,
-    airaPink2,
-    airaPink3,
-    airaPink4,
-    airaPink5,
-    airaPink6,
-    airaPink7,
-    airaPink8,
-    airaPink9,
-    airaPink10
-  ],
-  description: "A graceful pink ensemble crafted with luxurious Katan silk. The beautifully tailored shirt is paired with an elegant sharara and a delicate organza dupatta, creating a timeless festive look perfect for special occasions. The rich fabric and impeccable tailoring ensure you stand out with understated elegance.",
-  colors: ["Pink"],
-  shippingTime: "5-6 Weeks",
-  fabricDetails: {
-    Shirt: "Katan Silk",
-    Sharara: "Katan Silk",
-    Dupatta: "Organza"
+  {
+    id: 23,
+    slug: "aaira-pink",
+    name: "AAIRA | Pink",
+    category: "luxury-pret",
+    subcategory: "aaira",
+    images: [airaPink1, airaPink2, airaPink3, airaPink4, airaPink5, airaPink6, airaPink7, airaPink8, airaPink9, airaPink10],
+    description: "A graceful pink ensemble crafted with luxurious Katan silk. The beautifully tailored shirt is paired with an elegant sharara and a delicate organza dupatta, creating a timeless festive look perfect for special occasions. The rich fabric and impeccable tailoring ensure you stand out with understated elegance.",
+    colors: ["Pink"],
+    shippingTime: "5-6 Weeks",
+    fabricDetails: { Shirt: "Katan Silk", Sharara: "Katan Silk", Dupatta: "Organza" },
+    customization: "For Customization please contact our Fashion consultant.",
+    note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
   },
-  customization: "For Customization please contact our Fashion consultant.",
-  note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
-},
-
-// --- AAIRA | Lemon Yellow (ID: 13) ---
-{
-  id: 24,
-  slug: "aaira-lemon-yellow",
-  name: "AAIRA | Lemon Yellow",
-  price: "42,500",
-  category: "luxury-pret",
-  subcategory: "aaira",
-  images: [
-    airaLemonYellow1,
-    airaLemonYellow2,
-    airaLemonYellow3,
-    airaLemonYellow4,
-    airaLemonYellow5,
-    airaLemonYellow6,
-    airaLemonYellow7,
-    airaLemonYellow8,
-    airaLemonYellow9,
-    airaLemonYellow10
-  ],
-  description: "A radiant Lemon Yellow ensemble that captures the essence of luxury pret. The Tassel Silk jacket and pants create a sophisticated silhouette, beautifully complemented by a delicate Net dupatta. Perfect for festive occasions and formal gatherings where you want to make a subtle yet striking statement.",
-  colors: ["Lemon Yellow"],
-  shippingTime: "5-6 Weeks",
-  fabricDetails: {
-    Jacket: "Tassel Silk",
-    Pants: "Tassel Silk",
-    Dupatta: "Net"
+  {
+    id: 24,
+    slug: "aaira-lemon-yellow",
+    name: "AAIRA | Lemon Yellow",
+    category: "luxury-pret",
+    subcategory: "aaira",
+    images: [airaLemonYellow1, airaLemonYellow2, airaLemonYellow3, airaLemonYellow4, airaLemonYellow5, airaLemonYellow6, airaLemonYellow7, airaLemonYellow8, airaLemonYellow9, airaLemonYellow10],
+    description: "A radiant Lemon Yellow ensemble that captures the essence of luxury pret. The Tassel Silk jacket and pants create a sophisticated silhouette, beautifully complemented by a delicate Net dupatta. Perfect for festive occasions and formal gatherings where you want to make a subtle yet striking statement.",
+    colors: ["Lemon Yellow"],
+    shippingTime: "5-6 Weeks",
+    fabricDetails: { Jacket: "Tassel Silk", Pants: "Tassel Silk", Dupatta: "Net" },
+    customization: "For Customization please contact our Fashion consultant.",
+    note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
   },
-  customization: "For Customization please contact our Fashion consultant.",
-  note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
-},
-
-// --- AAIRA | Navy Blue (ID: 6) ---
-{
-  id: 25,
-  slug: "aaira-navy-blue",
-  name: "AAIRA | Navy Blue",
-  price: "42,500",
-  category: "luxury-pret",
-  subcategory: "aaira",
-  images: [
-    airaNavyBlue1,
-    airaNavyBlue2,
-    airaNavyBlue3,
-    airaNavyBlue4,
-    airaNavyBlue5,
-    airaNavyBlue6,
-    airaNavyBlue7,
-    airaNavyBlue8,
-    airaNavyBlue9,
-    airaNavyBlue10
-  ],
-  description: "Sophistication meets contemporary design in this Navy Blue masterpiece. The Tassel Silk shirt and pants offer a luxurious texture and elegant drape, while the Chiffon dupatta adds a layer of ethereal grace. Perfect for formal gatherings, this ensemble embodies timeless elegance with a modern twist.",
-  colors: ["Navy Blue"],
-  shippingTime: "5-6 Weeks",
-  fabricDetails: {
-    Shirt: "Tassel Silk",
-    Pants: "Tassel Silk",
-    Dupatta: "Chiffon"
+  {
+    id: 25,
+    slug: "aaira-navy-blue",
+    name: "AAIRA | Navy Blue",
+    category: "luxury-pret",
+    subcategory: "aaira",
+    images: [airaNavyBlue1, airaNavyBlue2, airaNavyBlue3, airaNavyBlue4, airaNavyBlue5, airaNavyBlue6, airaNavyBlue7, airaNavyBlue8, airaNavyBlue9, airaNavyBlue10],
+    description: "Sophistication meets contemporary design in this Navy Blue masterpiece. The Tassel Silk shirt and pants offer a luxurious texture and elegant drape, while the Chiffon dupatta adds a layer of ethereal grace. Perfect for formal gatherings, this ensemble embodies timeless elegance with a modern twist.",
+    colors: ["Navy Blue"],
+    shippingTime: "5-6 Weeks",
+    fabricDetails: { Shirt: "Tassel Silk", Pants: "Tassel Silk", Dupatta: "Chiffon" },
+    customization: "For Customization please contact our Fashion consultant.",
+    note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
   },
-  customization: "For Customization please contact our Fashion consultant.",
-  note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
-},
-
-// --- AAIRA | Red (ID: 17) ---
-{
-  id: 26,
-  slug: "aaira-red",
-  name: "AAIRA | Red",
-  price: "42,500",
-  category: "luxury-pret",
-  subcategory: "aaira",
-  images: [
-    airaRed1,
-    airaRed2,
-    airaRed3,
-    airaRed4,
-    airaRed5,
-    airaRed6,
-    airaRed7,
-    airaRed8,
-    airaRed9,
-    airaRed10
-  ],
-  description: "Make a bold statement with this Wine Red ensemble from the AAIRA collection. The Tassel Silk Lengha and Choli create a luxurious, voluminous silhouette, perfectly balanced by the delicate Net dupatta. Rich in color and texture, this piece is ideal for festive celebrations and special occasions where you want to command attention with grace.",
-  colors: ["Wine Red"],
-  shippingTime: "5-6 Weeks",
-  fabricDetails: {
-    Lengha: "Tassel Silk",
-    Choli: "Tassel Silk",
-    Dupatta: "Net"
+  {
+    id: 26,
+    slug: "aaira-red",
+    name: "AAIRA | Red",
+    category: "luxury-pret",
+    subcategory: "aaira",
+    images: [airaRed1, airaRed2, airaRed3, airaRed4, airaRed5, airaRed6, airaRed7, airaRed8, airaRed9, airaRed10],
+    description: "Make a bold statement with this Wine Red ensemble from the AAIRA collection. The Tassel Silk Lengha and Choli create a luxurious, voluminous silhouette, perfectly balanced by the delicate Net dupatta. Rich in color and texture, this piece is ideal for festive celebrations and special occasions where you want to command attention with grace.",
+    colors: ["Wine Red"],
+    shippingTime: "5-6 Weeks",
+    fabricDetails: { Lengha: "Tassel Silk", Choli: "Tassel Silk", Dupatta: "Net" },
+    customization: "For Customization please contact our Fashion consultant.",
+    note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
   },
-  customization: "For Customization please contact our Fashion consultant.",
-  note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
-},
-
-
-// --- AAIRA | Mustard (ID: 16) ---
-{
-  id: 28,
-  slug: "aaira-mustard",
-  name: "AAIRA | Mustard",
-  price: "42,500",
-  category: "luxury-pret",
-  subcategory: "aaira",
-  images: [
-    airaMustard1,
-    airaMustard2,
-    airaMustard3,
-    airaMustard4,
-    airaMustard5,
-    airaMustard6,
-    airaMustard7,
-    airaMustard8,
-    airaMustard9,
-    airaMustard10
-  ],
-  description: "A rich Mustard ensemble that exudes warmth and sophistication. Crafted from premium Silk, the shirt and pants offer a luxurious sheen and comfortable fit. This versatile piece transitions effortlessly from day events to evening gatherings, making it a must-have addition to your festive wardrobe.",
-  colors: ["Mustard"],
-  shippingTime: "5-6 Weeks",
-  fabricDetails: {
-    Shirt: "Silk",
-    Pants: "Silk"
+  {
+    id: 28,
+    slug: "aaira-mustard",
+    name: "AAIRA | Mustard",
+    category: "luxury-pret",
+    subcategory: "aaira",
+    images: [airaMustard1, airaMustard2, airaMustard3, airaMustard4, airaMustard5, airaMustard6, airaMustard7, airaMustard8, airaMustard9, airaMustard10],
+    description: "A rich Mustard ensemble that exudes warmth and sophistication. Crafted from premium Silk, the shirt and pants offer a luxurious sheen and comfortable fit. This versatile piece transitions effortlessly from day events to evening gatherings, making it a must-have addition to your festive wardrobe.",
+    colors: ["Mustard"],
+    shippingTime: "5-6 Weeks",
+    fabricDetails: { Shirt: "Silk", Pants: "Silk" },
+    customization: "For Customization please contact our Fashion consultant.",
+    note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
   },
-  customization: "For Customization please contact our Fashion consultant.",
-  note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
-},
-
-// --- AAIRA | Magenta & Yellow (ID: 15) ---
-{
-  id: 29,
-  slug: "aaira-magenta-yellow",
-  name: "AAIRA | Magenta & Yellow",
-  price: "42,500",
-  category: "luxury-pret",
-  subcategory: "aaira",
-  images: [
-    airaMagentaYellow1,
-    airaMagentaYellow3,
-    airaMagentaYellow4,
-    airaMagentaYellow5,
-    airaMagentaYellow6,
-    airaMagentaYellow7,
-    airaMagentaYellow8,
-    airaMagentaYellow9,
-    airaMagentaYellow10,
-    airaMagentaYellow11,
-    airaMagentaYellow12,
-    airaMagentaYellow13,
-    airaMagentaYellow14,
-    airaMagentaYellow15
-  ],
-  description: "A stunning fusion of Magenta and Yellow in this exquisite ensemble. The Raw Silk Lengha and Choli offer a luxurious texture and fall, while the Organza dupatta adds an ethereal touch. This vibrant combination is perfect for festive celebrations and special occasions where you want to make a bold yet elegant statement.",
-  colors: ["Magenta", "Yellow"],
-  shippingTime: "5-6 Weeks",
-  fabricDetails: {
-    Lengha: "Raw Silk",
-    Choli: "Raw Silk",
-    Dupatta: "Organza"
+  {
+    id: 29,
+    slug: "aaira-magenta-yellow",
+    name: "AAIRA | Magenta & Yellow",
+    category: "luxury-pret",
+    subcategory: "aaira",
+    images: [airaMagentaYellow1, airaMagentaYellow3, airaMagentaYellow4, airaMagentaYellow5, airaMagentaYellow6, airaMagentaYellow7, airaMagentaYellow8, airaMagentaYellow9, airaMagentaYellow10, airaMagentaYellow11, airaMagentaYellow12, airaMagentaYellow13, airaMagentaYellow14, airaMagentaYellow15],
+    description: "A stunning fusion of Magenta and Yellow in this exquisite ensemble. The Raw Silk Lengha and Choli offer a luxurious texture and fall, while the Organza dupatta adds an ethereal touch. This vibrant combination is perfect for festive celebrations and special occasions where you want to make a bold yet elegant statement.",
+    colors: ["Magenta", "Yellow"],
+    shippingTime: "5-6 Weeks",
+    fabricDetails: { Lengha: "Raw Silk", Choli: "Raw Silk", Dupatta: "Organza" },
+    customization: "For Customization please contact our Fashion consultant.",
+    note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
   },
-  customization: "For Customization please contact our Fashion consultant.",
-  note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
-},
-
 
   // --- FORMAL ---
-// --- FORMAL: SURKH AFSANA (NEW) ---
   {
     id: 18,
     slug: "surkh-afsana-crimson-red",
     name: "SURKH AFSANA",
-    price: "35,000",
     category: "formal",
     subcategory: "formal",
     images: [surkhAfsana1, surkhAfsana2, surkhAfsana3],
     description: "A crimson red long Shirt beautifully Hand Embroidered using Dabka, Kora, Tilla, Rehsam, Sitara and Beads. Flamingo pattern stitched with loaded Zardosi work makes the attire unique and artistic. The shirt is paired with Jamawar Pants and Net Dupatta.",
     colors: ["Crimson Red"],
     shippingTime: "1 to 2 Months",
-    fabricDetails: {
-      Shirt: "Net",
-      Dupatta: "Net",
-      Pants: "Jamawar"
-    },
+    fabricDetails: { Shirt: "Net", Dupatta: "Net", Pants: "Jamawar" },
     customization: "For Customization please contact our Fashion consultant.",
     note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
   },
-
-  // --- FORMAL: SHAB-E-WASL (NEW) ---
   {
     id: 19,
     slug: "shab-e-wasl-black-gold",
     name: "SHAB E WASL",
-    price: "42,000",
     category: "formal",
     subcategory: "formal",
     images: [shabEWasl1, shabEWasl2, shabEWasl3, shabEWasl4, shabEWasl5],
     description: "A swanky black attire from Gulbadaan collection. Black raw silk front Open Jacket is hand worked with such a classy pattern consisting a mixture of linear and floral motifs. Eye pleasing hues of Resham from Emerald Green to Burnt Orange add a color to the jet black base. Loaded hand work makes one admire the extreme hard work of the super talented craftsmen. The gown is paired with a ritzy atlas Jamawaar Farshi Gharara making the outfit so up class and Royal.",
     colors: ["Jet Black", "Gold"],
     shippingTime: "1 to 2 Months",
-    fabricDetails: {
-      Jacket: "Raw Silk",
-      Camisole: "Jamawar",
-      Gharara: "Jamawar"
-    },
+    fabricDetails: { Jacket: "Raw Silk", Camisole: "Jamawar", Gharara: "Jamawar" },
     customization: "For Customization please contact our Fashion consultant.",
     note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
   },
-
-  // --- FORMAL: TANGERINE (NEW) ---
   {
     id: 20,
     slug: "tangerine-rust-maroon",
     name: "TANGERINE",
-    price: "38,000",
     category: "formal",
     subcategory: "formal",
     images: [tangerine1, tangerine2, tangerine3, tangerine4, tangerine5, tangerine6, tangerine7, tangerine8, tangerine9],
     description: "A chic article from our formal collection. Katan silk Peshwas with intricate handwork using tilla, nakhshi, resham, crystals and Swarovski adds so much of class and beauty. Eye pleasing hue of tangerine is blended with a royal shade of maroon. Dupatta comes with delicate handwork borders and gold tissue facings.",
     colors: ["Rust", "Maroon"],
     shippingTime: "2 Months",
-    fabricDetails: {
-      Pishwas: "Katan Silk",
-      Dupatta: "Net"
-    },
+    fabricDetails: { Pishwas: "Katan Silk", Dupatta: "Net" },
     customization: "For Customization please contact our Fashion consultant.",
     note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
   },
-
-  // --- FORMAL: BAHAAR (NEW) ---
   {
     id: 21,
     slug: "bahaar-neon-yellow",
     name: "BAHAAR",
-    price: "32,000",
     category: "formal",
     subcategory: "formal",
     images: [bahaar1, bahaar2, bahaar3, bahaar4, bahaar5, bahaar6, bahaar7, bahaar8, bahaar9, bahaar10, bahaar11, bahaar12],
     description: "Look at this bright Neon yellow Pishwas. Isn't it a treat to eyes. Traditional gota work Pishwas with bright appliques and gold hand embroidery makes it a perfect outfit to brighten up your mayun/ mehndi day. Chatta Patti Dupatta with handwork borders makes the attire flawless and worth it.",
     colors: ["Neon Yellow"],
     shippingTime: "2 Months",
-    fabricDetails: {
-      Pishwas: "Traditional Gota Work",
-      Dupatta: "Chatta Patti with Handwork Borders"
-    },
+    fabricDetails: { Pishwas: "Traditional Gota Work", Dupatta: "Chatta Patti with Handwork Borders" },
     customization: "For Customization please contact our Fashion consultant.",
     note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
   },
-
-  // --- FORMAL: DEW (UPDATE EXISTING ID 11) ---
   {
     id: 11,
     slug: "dew-mint-lavender",
     name: "DEW",
-    price: "38,000",
     category: "formal",
     subcategory: "formal",
     images: [dew1, dew2, dew3, dew4, dew5],
     description: "A luxury formal attire which is a class apart. Eye pleasing shade of mint blended with soft lilac dupatta adds grace and charm. Intricate hand embroidery and fine stitching makes the outfit flawless.",
     colors: ["Mint", "Lavender"],
     shippingTime: "2 Months",
-    fabricDetails: {
-      Shirt: "Net",
-      Dupatta: "Organza",
-      Pants: "Raw Silk"
-    },
+    fabricDetails: { Shirt: "Net", Dupatta: "Organza", Pants: "Raw Silk" },
     customization: "For Customization please contact our Fashion consultant.",
     note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
   },
-
-  // --- FORMAL: DILJAAN (UPDATE EXISTING) ---
   {
     id: 22,
     slug: "diljaan-deep-maroon",
     name: "DILJAAN",
-    price: "42,000",
     category: "formal",
     subcategory: "formal",
     images: [diljaan1, diljaan2, diljaan3, diljaan4, diljaan5, diljaan6, diljaan7, diljaan8, diljaan9],
     description: "An ethnic pishwas with a classy silhouette and zardosi work blended with a velvet shawl. Shawl's embroidery pattern is a blend of floral and geometric patterns inspired from Mughal architecture.",
     colors: ["Deep Maroon"],
     shippingTime: "5-6 Weeks",
-    fabricDetails: {
-      Pishwas: "Katan Silk",
-      Shawl: "Velvet"
-    },
+    fabricDetails: { Pishwas: "Katan Silk", Shawl: "Velvet" },
     customization: "For Customization please contact our Fashion consultant.",
     note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
   },
-
-  // --- FORMAL: GULAAB (UPDATE EXISTING ID 10) ---
   {
     id: 10,
     slug: "gulaab-maroon",
     name: "GULAAB",
-    price: "38,000",
     category: "formal",
     subcategory: "formal",
     images: [gulaab1, gulaab2, gulaab3],
     description: "The article is beautifully hand embellished using Applique work technique, Dabka, Kora, Crystals and Swarovski. Pishwas crafted in Organza and Velvet, paired with an Organza Lengha and Crinkle Chiffon Dupatta for a complete regal look.",
     colors: ["Maroon"],
     shippingTime: "2 Months",
-    fabricDetails: {
-      Pishwas: "Organza and Velvet",
-      Lengha: "Organza",
-      Dupatta: "Crinkle Chiffon"
-    },
+    fabricDetails: { Pishwas: "Organza and Velvet", Lengha: "Organza", Dupatta: "Crinkle Chiffon" },
     customization: "For Customization please contact our Fashion consultant.",
     note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
   },
+
+  // --- VELVET ---
   {
     id: 31,
     slug: "imperial-olive-velvet",
     name: "IMPERIAL",
     category: "luxury-pret",
     subcategory: "velvet",
-    images: [imperial1,imperial1,imperial1,imperial1,imperial1,imperial1,imperial1,imperial1,imperial1,imperial1],
+    images: [imperial1, imperial2, imperial3, imperial4, imperial5, imperial6, imperial7, imperial8, imperial9, imperial10],
     description: "An upstyle olive green outfit which consists of a velvet long shirt hand embellished with dull gold zardosi work. Organza dupatta has beautiful stitching details using lappa and kiran.",
     colors: ["Olive Green"],
     fabricDetails: { Shirt: "Velvet", Dupatta: "Organza", Shararah: "Crushed Medium Silk" },
   },
-
   {
     id: 32,
     slug: "crimson-red-velvet",
     category: "luxury-pret",
     subcategory: "velvet",
-    images: [crimson1,crimson1,crimson1,crimson1,crimson1,crimson1,crimson1,crimson1,crimson1,crimson1],
+    images: [crimson1, crimson2, crimson3, crimson4, crimson5, crimson6, crimson7, crimson8, crimson9, crimson10],
     description: "A crimson red long shirt made on pure french velvet beautifully hand crafted using zardosi embroidery, reham work blended with swarovski, diamonties, resham and cut dana.",
     colors: ["Crimson Red"],
     fabricDetails: { Shirt: "French Velvet", Culottes: "Tissue Silk", Dupatta: "Organza" },
   },
-
   {
     id: 33,
     slug: "mistero-black-velvet",
     name: "MISTERO",
     category: "luxury-pret",
     subcategory: "velvet",
-    images: [mistero1,mistero1,mistero1,mistero1,mistero1,mistero1,mistero1,mistero1,mistero1,mistero1],
+    images: [mistero1, mistero2, mistero3, mistero4, mistero5, mistero6, mistero7, mistero8, mistero9, mistero10],
     description: "A black velvet kaftan hand embellished using sequin, crystals and dori work. The classy silhouette and fine fabric makes it upchic and regal.",
     colors: ["Black"],
     fabricDetails: { Kaftan: "Velvet" },
   },
-
   {
     id: 34,
     slug: "scintilla-ruby-red-velvet",
     name: "SCINTILLA",
     category: "luxury-pret",
     subcategory: "velvet",
-    images: [scintilla1,scintilla1,scintilla1,scintilla1,scintilla1,scintilla1,scintilla1,scintilla1,scintilla1,scintilla1],
+    images: [scintilla1, scintilla2, scintilla3, scintilla4, scintilla5, scintilla6, scintilla7, scintilla8, scintilla9, scintilla10],
     description: "A velvet kaftan embellished using intricate dori work technique, swarovski, crystals and beads. Trendy silhouette makes the attire majestic.",
     colors: ["Ruby Red"],
     fabricDetails: { Kaftan: "Velvet" },
   },
+
+  // --- WANIA ---
   {
     id: 40,
     slug: "wania-jet-black-maxi",
     name: "WANIA | Jet Black",
-    price: "14,000",
     category: "luxury-pret",
     subcategory: "wania",
     images: [jb1, jb2, jb3, jb4, jb5, jb6, jb7, jb8, jb9, jb10],
@@ -796,7 +649,6 @@ export const products = [
     id: 41,
     slug: "wania-hot-pink-sharara",
     name: "WANIA | Hot Pink",
-    price: "20,000",
     category: "luxury-pret",
     subcategory: "wania",
     images: [hp1, hp2, hp3, hp4, hp5, hp6, hp7, hp8, hp9, hp10],
@@ -809,7 +661,6 @@ export const products = [
     id: 42,
     slug: "wania-magenta-drop-gown",
     name: "WANIA | Magenta",
-    price: "15,000",
     category: "luxury-pret",
     subcategory: "wania",
     images: [m1, m2, m3, m4, m5, m6, m7, m8, m9, m10],
@@ -822,7 +673,6 @@ export const products = [
     id: 43,
     slug: "wania-zinc-teal-shirt",
     name: "WANIA | Zinc",
-    price: "15,000",
     category: "luxury-pret",
     subcategory: "wania",
     images: [z1, z2, z3, z4, z5, z6, z7, z8, z9, z10],
@@ -835,7 +685,6 @@ export const products = [
     id: 44,
     slug: "wania-jet-black-2-silk",
     name: "WANIA | Jet Black 2",
-    price: "15,000",
     category: "luxury-pret",
     subcategory: "wania",
     images: [jb2_1, jb2_2, jb2_3, jb2_4, jb2_5, jb2_6, jb2_7, jb2_8],
@@ -848,7 +697,6 @@ export const products = [
     id: 45,
     slug: "wania-navy-blue-pishwas",
     name: "WANIA | Navy Blue",
-    price: "15,000",
     category: "luxury-pret",
     subcategory: "wania",
     images: [nb1, nb2, nb3, nb4, nb5, nb6, nb7, nb8, nb9],
@@ -861,7 +709,6 @@ export const products = [
     id: 46,
     slug: "wania-magenta-2-gharara",
     name: "WANIA | Magenta 2",
-    price: "15,000",
     category: "luxury-pret",
     subcategory: "wania",
     images: [m2_1, m2_2, m2_3, m2_4, m2_5, m2_6, m2_7, m2_9, m2_10],
@@ -874,7 +721,6 @@ export const products = [
     id: 47,
     slug: "wania-olive-green-sharara",
     name: "WANIA | Olive Green",
-    price: "14,000",
     category: "luxury-pret",
     subcategory: "wania",
     images: [og1, og2, og3, og4, og5, og6, og7, og8, og9, og10],
@@ -887,7 +733,6 @@ export const products = [
     id: 48,
     slug: "wania-rose-gold-sharara",
     name: "WANIA | Rose Gold",
-    price: "14,000",
     category: "luxury-pret",
     subcategory: "wania",
     images: [rg1, rg2, rg3, rg4, rg5, rg6, rg7, rg8, rg9, rg10],
@@ -900,7 +745,6 @@ export const products = [
     id: 49,
     slug: "wania-off-white-organza",
     name: "WANIA | Off-White",
-    price: "13,000",
     category: "luxury-pret",
     subcategory: "wania",
     images: [ow1, ow2, ow3, ow4, ow5, ow6, ow7, ow8, ow9, ow10],

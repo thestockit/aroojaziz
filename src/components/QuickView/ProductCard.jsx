@@ -80,10 +80,6 @@ const ProductCard = ({ product, onQuickView }) => {
           {product.name}
         </h3>
         
-        {/* Price: Jost, 14px, #707173 */}
-        <p className="text-[14px] font-normal text-[#707173]">
-          Rs {product.price}
-        </p>
       </div>
     </div>
   );

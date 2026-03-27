@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 
 const QuickViewDrawer = ({ product, onClose }) => {
   const navigate = useNavigate();
-  const [quantity, setQuantity] = useState(1);
   const [activeImgIndex, setActiveImgIndex] = useState(0);
 
   if (!product) return null;
@@ -69,16 +68,13 @@ const QuickViewDrawer = ({ product, onClose }) => {
         {/* RIGHT SECTION: Product Controls */}
         <div className="flex flex-col text-left space-y-6">
           <header className="space-y-1">
-            {/* Title: EB Garamond, #171717 */}
             <h2 className="text-[26px] font-heading text-[#171717] normal-case tracking-normal">
               {product.name}
             </h2>
-            {/* Price: Jost, #707173 */}
-            <p className="text-[18px] font-body text-[#707173]">Rs {product.price}</p>
           </header>
 
           <div className="space-y-6 pt-2">
-            {/* Options Styling: Jost, 11px Small Caps */}
+            {/* Color Option */}
             <div>
               <p className="text-[11px] font-medium uppercase tracking-[0.1em] mb-3 text-[#171717]">Color</p>
               <div className="border border-gray-200 px-5 py-2 text-[13px] w-fit bg-white text-[#707173]">
@@ -86,6 +82,7 @@ const QuickViewDrawer = ({ product, onClose }) => {
               </div>
             </div>
 
+            {/* Size Options */}
             <div>
               <p className="text-[11px] font-medium uppercase tracking-[0.1em] mb-3 text-[#171717]">Size</p>
               <div className="flex flex-wrap gap-2">
@@ -96,16 +93,8 @@ const QuickViewDrawer = ({ product, onClose }) => {
                 ))}
               </div>
             </div>
-
-            <div>
-              <p className="text-[11px] font-medium uppercase tracking-[0.1em] mb-3 text-[#171717]">Quantity</p>
-              <div className="flex items-center border border-gray-200 w-fit bg-white text-[#707173]">
-                <button onClick={() => setQuantity(Math.max(1, quantity - 1))} className="px-4 py-2 hover:bg-gray-50 border-r border-gray-200">–</button>
-                <div className="w-12 text-center text-sm">{quantity}</div>
-                <button onClick={() => setQuantity(quantity + 1)} className="px-4 py-2 hover:bg-gray-50 border-l border-gray-200">+</button>
-              </div>
-            </div>
           </div>   
+          
           <button 
             onClick={handleViewFullDetails}
             className="text-[11px] text-[#707173] tracking-[0.15em] hover:text-black uppercase mt-4 text-left border-b border-[#707173] w-fit pb-1"

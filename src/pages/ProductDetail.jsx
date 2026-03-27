@@ -16,7 +16,6 @@ const ProductDetail = () => {
   const product = products.find((p) => p.slug === slug);
 
   const [activeImgIndex, setActiveImgIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState('S');
   const [isSizeGuideOpen, setIsSizeGuideOpen] = useState(false);
   const mainSwiperRef = useRef(null);
@@ -42,7 +41,7 @@ const ProductDetail = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           
-          {/* LEFT: IMAGE GALLERY (Fixed Gallery Issue) */}
+          {/* LEFT: IMAGE GALLERY */}
           <div className="lg:col-span-7 w-full">
             <div className="lg:sticky lg:top-28">
               <div className="relative aspect-[3/4] overflow-hidden bg-[#f9f9f9]">
@@ -68,7 +67,7 @@ const ProductDetail = () => {
                 </button>
               </div>
 
-              {/* Thumbnail Bar for Mobile & Desktop */}
+              {/* Thumbnail Bar */}
               <div className="flex gap-2 mt-4 overflow-x-auto no-scrollbar">
                 {product.images.map((img, idx) => (
                   <button 
@@ -87,35 +86,32 @@ const ProductDetail = () => {
           <div className="lg:col-span-5 flex flex-col text-left space-y-6 md:space-y-8">
             <h1 className="text-3xl md:text-5xl font-serif text-[#1a1a1a] leading-tight">{product.name}</h1>
             
-            {/* Conditional Price: Optional for Bridal */}
-            <p className="text-lg md:text-xl text-[#1a1a1a] font-light">Rs {product.price}</p>
-
             {/* BRIDAL LAYOUT: Exact In-Line Buttons */}
             {isBridal ? (
-<div className="flex flex-col sm:flex-row gap-3 pt-6 pb-2 border-t border-gray-100">
-  <a 
-    href="https://wa.me/923330601258?text=Hi%20I%20would%20like%20to%20book%20an%20appointment" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="flex-1"
-  >
-    <button className="w-full py-3.5 border border-black text-[9px] md:text-[10px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition uppercase">
-      BOOK AN APPOINTMENT
-    </button>
-  </a>
-  <a 
-    href="https://wa.me/923330601258?text=Hi%20I%20need%20fashion%20consultation" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="flex-1"
-  >
-    <button className="w-full py-3.5 border border-black text-[9px] md:text-[10px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition uppercase">
-      TALK TO FASHION CONSULTANT
-    </button>
-  </a>
-</div>
+              <div className="flex flex-col sm:flex-row gap-3 pt-6 pb-2 border-t border-gray-100">
+                <a 
+                  href="https://wa.me/923330601258?text=Hi%20I%20would%20like%20to%20book%20an%20appointment" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                >
+                  <button className="w-full py-3.5 border border-black text-[9px] md:text-[10px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition uppercase">
+                    BOOK AN APPOINTMENT
+                  </button>
+                </a>
+                <a 
+                  href="https://wa.me/923330601258?text=Hi%20I%20need%20fashion%20consultation" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                >
+                  <button className="w-full py-3.5 border border-black text-[9px] md:text-[10px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition uppercase">
+                    TALK TO A CONSULTANT
+                  </button>
+                </a>
+              </div>
             ) : (
-              /* GENERAL LAYOUT: Stacked E-commerce Buttons */
+              /* GENERAL LAYOUT: Stacked Buttons */
               <div className="space-y-6 md:space-y-8 pt-6 border-t border-gray-100">
                 <button 
                   onClick={() => setIsSizeGuideOpen(true)}
@@ -132,49 +128,39 @@ const ProductDetail = () => {
                     ))}
                   </div>
                 </div>
-
-                <div className="space-y-3">
-                   <p className="text-[11px] font-bold uppercase tracking-widest text-gray-500">Quantity</p>
-                   <div className="flex items-center border border-gray-200 w-fit">
-                    <button onClick={() => setQuantity(Math.max(1, quantity - 1))} className="px-4 py-2 hover:bg-gray-50 border-r border-gray-200">–</button>
-                    <div className="px-5 text-sm font-medium">{quantity}</div>
-                    <button onClick={() => setQuantity(quantity + 1)} className="px-4 py-2 hover:bg-gray-50 border-l border-gray-200">+</button>
-                  </div>
-                </div>
-
-             </div>
+              </div>
             )}
 
             {/* PRODUCT DETAILS */}
             <div className="space-y-6 md:space-y-8 pt-8 border-t border-gray-100">
-               <div>
+                <div>
                   <p className="text-[11px] font-bold uppercase tracking-widest mb-2">Color</p>
                   <div className="px-5 py-2 border border-gray-400 w-fit text-[13px] uppercase tracking-wider">
                     {product.colors?.[0] || 'Default'}
                   </div>
-               </div>
+                </div>
 
-               {product.fabricDetails && (
-                 <div className="space-y-3">
+                {product.fabricDetails && (
+                  <div className="space-y-3">
                     <p className="text-[11px] font-bold uppercase tracking-widest">Product Details:</p>
                     <ul className="text-[13px] md:text-[14px] text-gray-600 space-y-2 font-light list-disc list-inside ml-1 leading-relaxed">
-                       {Object.entries(product.fabricDetails).map(([key, val]) => (
-                         <li key={key} className="capitalize">{val}</li>
-                       ))}
+                        {Object.entries(product.fabricDetails).map(([key, val]) => (
+                          <li key={key} className="capitalize">{val}</li>
+                        ))}
                     </ul>
-                 </div>
-               )}
+                  </div>
+                )}
 
-               <div className="space-y-3">
+                <div className="space-y-3">
                   <p className="text-[11px] font-bold uppercase tracking-widest text-gray-900">Description</p>
                   <p className="text-[14px] md:text-[15px] text-gray-600 leading-relaxed font-light">{product.description}</p>
-               </div>
+                </div>
 
-               {product.shippingTime && (
-                 <p className="text-[12px] font-bold uppercase tracking-widest">
-                   Shipping Time: <span className="font-light normal-case text-gray-500 ml-2">{product.shippingTime}</span>
-                 </p>
-               )}
+                {product.shippingTime && (
+                  <p className="text-[12px] font-bold uppercase tracking-widest">
+                    Shipping Time: <span className="font-light normal-case text-gray-500 ml-2">{product.shippingTime}</span>
+                  </p>
+                )}
             </div>
           </div>
         </div>
@@ -190,8 +176,7 @@ const ProductDetail = () => {
                 <div className="aspect-[3/4] overflow-hidden bg-[#f9f9f9] mb-4 md:mb-5">
                    <img src={item.images[0]} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt={item.name} />
                 </div>
-                <h3 className="text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-gray-500 font-light mb-1 px-2 line-clamp-1">{item.name}</h3>
-                <p className="text-xs md:text-sm font-medium text-gray-900">Rs {item.price}</p>
+                <h3 className="text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-gray-900 font-light mb-1 px-2 line-clamp-1">{item.name}</h3>
               </div>
             ))}
           </div>
