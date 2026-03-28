@@ -20,6 +20,8 @@ import { AuthProvider } from "./context/AuthContext";
 import { CartProvider } from "./context/CartContext";
 import { WishlistProvider } from "./context/WishlistContext";
 
+import TestSizeGuide from './pages/TestSizeGuide';
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -32,6 +34,8 @@ function App() {
         { path: "media", element: <VideoSection /> },
         { path: "checkout", element: <Checkout /> },
 
+        { path: "test-size", element: <TestSizeGuide /> },
+
         // ✅ THE EXPERT DYNAMIC ROUTES
         // These handle ALL categories and subcategories automatically
         { path: "collections/:categoryName", element: <CategoryPage /> },
@@ -43,6 +47,7 @@ function App() {
         // Legacy/Old routes (Keeping them to avoid breaking existing links)
         { path: "chahatcollection/shop/suit/:id", element: <ShopProduct /> },
       ],
+      
     },
     {
       path: "*",
@@ -62,6 +67,7 @@ function App() {
         </WishlistProvider>
       </CartProvider>
     </AuthProvider>
+    
   );
 }
 

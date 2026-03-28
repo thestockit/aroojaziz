@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Thumbs, FreeMode } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { products } from '../data/products'; 
-import SizeGuidePopup from '../components/SizeGuidePopup';
+import SizeGuidePopup from '../components/SizeGuide/SizeGuidePopup';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/free-mode';
 
 const ProductDetail = () => {
   const { slug } = useParams();
@@ -27,6 +26,17 @@ const ProductDetail = () => {
   if (!product) return <div className="py-20 text-center font-serif uppercase tracking-widest">Product Not Found</div>;
 
   const isBridal = product.category === 'bridal';
+
+  // ✅ HELPER: Selects the correct chart based on product details
+  const getSizeChartType = () => {
+    const category = product.category?.toLowerCase();
+    const sub = product.subcategory?.toLowerCase();
+
+    if (category === 'bridal') return 'bridal';
+    if (sub === 'pishwas' || sub === 'maxi' || sub === 'wania') return 'pishwas';
+    if (sub === 'pants') return 'pants';
+    return 'shirt'; // Default for Velvet (Crimson, Imperial) and Luxury Pret (Aaira)
+  };
 
   return (
     <div className="min-h-screen bg-white pb-20 pt-4">
@@ -58,7 +68,6 @@ const ProductDetail = () => {
                   ))}
                 </Swiper>
                 
-                {/* Desktop Navigation Arrows */}
                 <button onClick={() => mainSwiperRef.current?.slidePrev()} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 bg-white/50 hover:bg-white rounded-full hidden md:block transition-all">
                   <FiChevronLeft size={20}/>
                 </button>
@@ -88,30 +97,30 @@ const ProductDetail = () => {
             
             {/* BRIDAL LAYOUT: Exact In-Line Buttons */}
             {isBridal ? (
-              <div className="flex flex-col sm:flex-row gap-3 pt-6 pb-2 border-t border-gray-100">
-                <a 
-                  href="https://wa.me/923330601258?text=Hi%20I%20would%20like%20to%20book%20an%20appointment" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex-1"
+              <div className="flex flex-col space-y-4 pt-6 border-t border-gray-100">
+                {/* Size Guide Button for Bridal */}
+                <button 
+                  onClick={() => setIsSizeGuideOpen(true)}
+                  className="w-fit text-[11px] font-bold tracking-widest uppercase border-b border-black pb-1 hover:opacity-60 transition"
                 >
-                  <button className="w-full py-3.5 border border-black text-[9px] md:text-[10px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition uppercase">
-                    BOOK AN APPOINTMENT
-                  </button>
-                </a>
-                <a 
-                  href="https://wa.me/923330601258?text=Hi%20I%20need%20fashion%20consultation" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex-1"
-                >
-                  <button className="w-full py-3.5 border border-black text-[9px] md:text-[10px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition uppercase">
-                    TALK TO A CONSULTANT
-                  </button>
-                </a>
+                  View Size Guide
+                </button>
+
+                <div className="flex flex-col sm:flex-row gap-3 pb-2">
+                  <a href="https://wa.me/923330601258" target="_blank" rel="noopener noreferrer" className="flex-1">
+                    <button className="w-full py-3.5 border border-black text-[9px] md:text-[10px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition uppercase">
+                      BOOK AN APPOINTMENT
+                    </button>
+                  </a>
+                  <a href="https://wa.me/923330601258" target="_blank" rel="noopener noreferrer" className="flex-1">
+                    <button className="w-full py-3.5 border border-black text-[9px] md:text-[10px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition uppercase">
+                      TALK TO A CONSULTANT
+                    </button>
+                  </a>
+                </div>
               </div>
             ) : (
-              /* GENERAL LAYOUT: Stacked Buttons */
+              /* GENERAL LAYOUT: Crimson / Velvet / Wania */
               <div className="space-y-6 md:space-y-8 pt-6 border-t border-gray-100">
                 <button 
                   onClick={() => setIsSizeGuideOpen(true)}
@@ -132,7 +141,7 @@ const ProductDetail = () => {
             )}
 
             {/* PRODUCT DETAILS */}
-            <div className="space-y-6 md:space-y-8 pt-8 border-t border-gray-100">
+            <div className="space-y-6 md:space-y-8 pt-8 border-t border-gray-100 text-[#1a1a1a]">
                 <div>
                   <p className="text-[11px] font-bold uppercase tracking-widest mb-2">Color</p>
                   <div className="px-5 py-2 border border-gray-400 w-fit text-[13px] uppercase tracking-wider">
@@ -172,7 +181,7 @@ const ProductDetail = () => {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-8 gap-y-10 md:gap-y-12">
             {products.filter(p => p.category === product.category && p.slug !== product.slug).slice(0, 4).map((item) => (
-              <div key={item.id} className="group cursor-pointer text-center" onClick={() => navigate(`/product/${item.slug}`)}>
+              <div key={item.item} className="group cursor-pointer text-center" onClick={() => navigate(`/product/${item.slug}`)}>
                 <div className="aspect-[3/4] overflow-hidden bg-[#f9f9f9] mb-4 md:mb-5">
                    <img src={item.images[0]} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt={item.name} />
                 </div>
@@ -183,7 +192,13 @@ const ProductDetail = () => {
         </div>
       </div>
 
-      <SizeGuidePopup isOpen={isSizeGuideOpen} onClose={() => setIsSizeGuideOpen(false)} />
+      {/* ✅ DYNAMIC POPUP INTEGRATION */}
+      <SizeGuidePopup 
+        isOpen={isSizeGuideOpen} 
+        onClose={() => setIsSizeGuideOpen(false)} 
+        productName={product.name}
+        type={getSizeChartType()} 
+      />
     </div>
   );
 };
