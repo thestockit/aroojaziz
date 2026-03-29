@@ -73,11 +73,11 @@ const Navbar = () => {
               <NavLink to="/collections/bridal" className="hover:text-[#171717] uppercase">Bridal</NavLink>
               <div className="absolute top-[100%] left-1/2 -translate-x-1/2 w-48 bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="flex flex-col py-1">
-                  <NavLink to="/collections/bridal/pearl-majesty" className={linkStyles}>Pearl majesty</NavLink>
+                  <NavLink to="/collections/bridal/gulbadan" className={linkStyles}>Gulbadan</NavLink>
                   <MenuDivider />
-                  <NavLink to="/collections/bridal/rang-e-ishq" className={linkStyles}>Rang e ishq</NavLink>
+                  <NavLink to="/collections/bridal/zebaish" className={linkStyles}>Zebaish</NavLink>
                   <MenuDivider />
-                  <NavLink to="/collections/bridal/shahana" className={linkStyles}>Shahana</NavLink>
+                  <NavLink to="/collections/bridal/bridal-couture-2026" className={linkStyles}>Bridal Couture'26</NavLink>
                 </div>
               </div>
             </li>
@@ -112,9 +112,9 @@ const Navbar = () => {
             <button onClick={() => setMobileDropdownBridal(!mobileDropdownBridal)} className="py-4 border-b">Bridal</button>
             {mobileDropdownBridal && (
               <div className="bg-gray-50 flex flex-col">
-                <NavLink to="/collections/bridal/pearl-majesty" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Pearl Majesty</NavLink>
-                <NavLink to="/collections/bridal/rang-e-ishq" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Rang e Ishq</NavLink>
-                <NavLink to="/collections/bridal/shahana" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Shahana</NavLink>
+                <NavLink to="/collections/bridal/gulbadan" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Gulbadan</NavLink>
+                <NavLink to="/collections/bridal/zebaish" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Zebaish</NavLink>
+                <NavLink to="/collections/bridal/bridal-couture-2026" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Bridal Couture'26</NavLink>
               </div>
             )}
 

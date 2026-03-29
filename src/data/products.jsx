@@ -3,9 +3,32 @@
 // ==========================================
 
 // --- BRIDAL COLLECTIONS ---
-import shahanaMain from "../assets/3pc/shahana.webp";
-import shahana2 from "../assets/3pc/sha3.webp";
-import shahana3 from "../assets/3pc/sha4.webp";
+import shahana1 from "../assets/Bridal/Zebaish/Shahana/1.webp";
+import shahana2 from "../assets/Bridal/Zebaish/Shahana/2.webp";
+import shahana3 from "../assets/Bridal/Zebaish/Shahana/3.webp";
+import shahana4 from "../assets/Bridal/Zebaish/Shahana/4.webp";
+import shahana5 from "../assets/Bridal/Zebaish/Shahana/5.webp";
+import shahana6 from "../assets/Bridal/Zebaish/Shahana/6.webp";
+import shahana7 from "../assets/Bridal/Zebaish/Shahana/7.webp";
+
+import asward1 from "../assets/Bridal/Zebaish/Aswaad/1.webp";
+import asward2 from "../assets/Bridal/Zebaish/Aswaad/2.webp";
+import asward3 from "../assets/Bridal/Zebaish/Aswaad/3.webp";
+import asward4 from "../assets/Bridal/Zebaish/Aswaad/4.webp";
+import asward5 from "../assets/Bridal/Zebaish/Aswaad/5.webp";
+import asward6 from "../assets/Bridal/Zebaish/Aswaad/6.webp";
+import asward7 from "../assets/Bridal/Zebaish/Aswaad/7.webp";
+import asward8 from "../assets/Bridal/Zebaish/Aswaad/8.webp";
+
+import gul1 from "../assets/Bridal/Zebaish/Gul-E-Surkh/1.webp";
+import gul2 from "../assets/Bridal/Zebaish/Gul-E-Surkh/2.webp";
+import gul3 from "../assets/Bridal/Zebaish/Gul-E-Surkh/3.webp";
+import gul4 from "../assets/Bridal/Zebaish/Gul-E-Surkh/4.webp";
+import gul5 from "../assets/Bridal/Zebaish/Gul-E-Surkh/5.webp"; 
+import gul6 from "../assets/Bridal/Zebaish/Gul-E-Surkh/6.webp";
+import gul7 from "../assets/Bridal/Zebaish/Gul-E-Surkh/7.webp";
+import gul8 from "../assets/Bridal/Zebaish/Gul-E-Surkh/8.webp";
+
 
 import rangeIshqMain from "../assets/3pc/RangeIshq.webp";
 import rangeIshq2 from "../assets/3pc/rgisq3.webp";
@@ -20,6 +43,24 @@ import anarkali3 from "../assets/3pc/anarkali3.webp";
 import tabeerMain from "../assets/3pc/Tabeer.webp";
 import tabeer2 from "../assets/3pc/taber2.webp";
 import tabeer3 from "../assets/3pc/taber3.webp";
+
+// --- bridal couture-2026 ---
+import img1 from '../assets/Bridal/Couture-2026/Mehwar/1.webp';
+import img2 from '../assets/Bridal/Couture-2026/Mehwar/2.webp';
+import img3 from '../assets/Bridal/Couture-2026/Mehwar/3.webp';
+import img4 from '../assets/Bridal/Couture-2026/Mehwar/4.webp';
+import img5 from '../assets/Bridal/Couture-2026/Mehwar/5.webp';
+import img6 from '../assets/Bridal/Couture-2026/Mehwar/6.webp';
+import img7 from '../assets/Bridal/Couture-2026/Mehwar/7.webp';
+import img8 from '../assets/Bridal/Couture-2026/Mehwar/8.webp';
+import img9 from '../assets/Bridal/Couture-2026/Mehwar/9.webp';
+import img10 from '../assets/Bridal/Couture-2026/Mehwar/10.webp';
+import img11 from '../assets/Bridal/Couture-2026/Mehwar/11.webp';
+import img12 from '../assets/Bridal/Couture-2026/Mehwar/12.webp';
+import img13 from '../assets/Bridal/Couture-2026/Mehwar/13.webp';
+import img14 from '../assets/Bridal/Couture-2026/Mehwar/14.webp';
+
+
 
 // --- LUXURY PRET: AAIRA ---
 // ==========================================
@@ -331,20 +372,46 @@ import scintilla10 from "../assets/Velvet/Scintilla/10.webp";
 // ==========================================
 
 export const products = [
+  // --- Zebaish---
   // --- BRIDAL: SHAHANA ---
   {
     id: 1,
-    slug: "shahana-bridal-red",
+    slug: "shahana",
     name: "SHAHANA",
     category: "bridal",
-    subcategory: "shahana",
-    images: [shahanaMain, shahana2, shahana3],
+    subcategory: "zebaish",
+    images: [shahana1, shahana2, shahana3, shahana4, shahana5, shahana6, shahana7],
     description: "A classic red bridal attire which more than an outfit is a piece of art. The intricate details and complex handwork techniques make this out super classic! Farshi lehnga choli with a dramatic back trail.",
     colors: ["Jet Black Gold"],
     shippingTime: "3 months",
     fabricDetails: { Lengha: "Korean Net", Choli: "Korean Net", Dupatta: "Korean Net" },
     customization: "For Customization please contact our Fashion consultant.",
   },
+    {
+    id: 51,
+    slug: "bridal-aswad",
+    name: "ASWAD",
+    category: "bridal",
+    subcategory: "zebaish",
+    images: [asward1, asward2, asward3, asward4, asward5, asward6, asward7, asward8,],
+    description: "Where tradition meets elegance ♥️ An exquisite Pistacheau green article which consists of a peshawas made on pure zari tissue with handwork using mocaish, mirror, resham and zardosi work. The pehswas is paired with a pure tissue silk Lehnga with hand paint borders further enhanced with intricate hand embellishments. The dupatta is made on pure crinkle chiffon with a loaded mocaish work border and heavy hand embellished motifs using mirror, resham and mocaish work!!",
+    colors: ["Pistacheau green"],
+    shippingTime: "3 to 4 months",
+    fabricDetails: { Gown: "Zari net", Lehnga: "Organza", Dupatta: "crinkle chiffon" },
+  },
+      {
+    id: 52,
+    slug: "Gul-e-surkh",
+    name: "Gul-e-Surkh",
+    category: "bridal",
+    subcategory: "zebaish",
+    images: [gul1, gul2, gul3, gul4, gul5, gul6, gul7, gul8],
+    description: "Where tradition meets elegance ♥️ An exquisite Pistacheau green article which consists of a peshawas made on pure zari tissue with handwork using mocaish, mirror, resham and zardosi work. The pehswas is paired with a pure tissue silk Lehnga with hand paint borders further enhanced with intricate hand embellishments. The dupatta is made on pure crinkle chiffon with a loaded mocaish work border and heavy hand embellished motifs using mirror, resham and mocaish work!!",
+    colors: ["Pistacheau green"],
+    shippingTime: "3 to 4 months",
+    fabricDetails: { Gown: "Zari net", Lehnga: "Organza", Dupatta: "crinkle chiffon" },
+  },
+
 
   // --- BRIDAL: RANG E ISHQ ---
   {
@@ -352,7 +419,7 @@ export const products = [
     slug: "rang-e-ishq-velvet",
     name: "RANG E ISHQ",
     category: "bridal",
-    subcategory: "rang-e-ishq",
+    subcategory: "gulbadan",
     images: [rangeIshqMain, rangeIshq2, rangeIshq3],
     description: "Velvet lehnga with Chiffon Choli and Dupatta is embellished with loaded Zardosi work using sparkly gold tilla, kora, dabka, crystals, and beads. Inspired from Mughal architecture.",
     colors: ["Crimson Red"],
@@ -367,7 +434,7 @@ export const products = [
     slug: "pearl-majesty-white",
     name: "PEARL MAJESTY",
     category: "bridal",
-    subcategory: "pearl-majesty",
+    subcategory: "gulbadan",
     images: [pearlMain],
     description: "The perfect blend of elegance and sophistication. Raw silk lehnga choli is hand embellished beautifully using pearls, beads, swarovskies, and kora dabka.",
     colors: ["Pearl White"],
@@ -381,7 +448,7 @@ export const products = [
     slug: "anarkali-traditional-pishwas",
     name: "ANARKALI",
     category: "bridal",
-    subcategory: "shahana",
+    subcategory: "gulbadan",
     images: [anarkaliMain, anarkali2, anarkali3],
     description: "A breathtaking traditional bridal attire. Korean net pishwas with detailed hand embroidery using marori work techniques blended with an atlas Lehnga.",
     colors: ["Gold Bottle Green"],
@@ -393,7 +460,7 @@ export const products = [
     slug: "tabeer-exquisite-bridal",
     name: "TABEER",
     category: "bridal",
-    subcategory: "shahana",
+    subcategory: "gulbadan",
     images: [tabeerMain, tabeer2, tabeer3],
     description: "Benson Gold gown and Lehnga with a Coral contrasting Dupatta. Beautiful architectural and calligraphic Motifs executed with extra detailing.",
     colors: ["Coral Gold"],
@@ -753,5 +820,33 @@ export const products = [
     colors: ["Off White"],
     fabricDetails: { Shirt: "Organza", Pants: "Korean Raw Silk", Dupatta: "Organza" },
     customization: "Available"
-  }
+  },
+
+// --- Couture 26---
+  {
+    id: 50,
+    slug: "bridal-mehwar",
+    name: "Mehwar",
+    category: "bridal",
+    subcategory: "bridal-couture-2026",
+    images: [img1, img2, img3, img4, img5, img6, img7, 
+  img8, img9, img10, img11, img12, img13, img14],
+    description: "Where tradition meets elegance ♥️ An exquisite Pistacheau green article which consists of a peshawas made on pure zari tissue with handwork using mocaish, mirror, resham and zardosi work. The pehswas is paired with a pure tissue silk Lehnga with hand paint borders further enhanced with intricate hand embellishments. The dupatta is made on pure crinkle chiffon with a loaded mocaish work border and heavy hand embellished motifs using mirror, resham and mocaish work!!",
+    colors: ["Pistacheau green"],
+    shippingTime: "3 to 4 months",
+    fabricDetails: { Gown: "Zari net", Lehnga: "Organza", Dupatta: "crinkle chiffon" },
+  },
+  
+
+
+
+
+
+
+
+
+
+
+
+  
 ];
