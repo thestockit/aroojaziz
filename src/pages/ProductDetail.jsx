@@ -35,7 +35,7 @@ const ProductDetail = () => {
     if (category === 'bridal') return 'bridal';
     if (sub === 'pishwas' || sub === 'maxi' || sub === 'wania') return 'pishwas';
     if (sub === 'pants') return 'pants';
-    return 'shirt'; // Default for Velvet (Crimson, Imperial) and Luxury Pret (Aaira)
+    return 'shirt'; 
   };
 
   return (
