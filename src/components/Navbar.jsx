@@ -91,7 +91,7 @@ const Navbar = () => {
                   <MenuDivider />
                   <NavLink to="/collections/luxury-pret/wania" className={linkStyles}>Wania</NavLink>
                   <MenuDivider />
-                  <NavLink to="/collections/luxury-pret/velvet" className={linkStyles}>Velvet Edition Collection</NavLink>
+                  <NavLink to="/collections/luxury-pret/velvet" className={linkStyles}>Velvet Edition </NavLink>
                 </div>
               </div>
             </li>
@@ -123,7 +123,7 @@ const Navbar = () => {
               <div className="bg-gray-50 flex flex-col">
                 <NavLink to="/collections/luxury-pret/aaira" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Aaira</NavLink>
                 <NavLink to="/collections/luxury-pret/wania" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Wania</NavLink>
-                <NavLink to="/collections/luxury-pret/velvet" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Velvet Edition Collection</NavLink>
+                <NavLink to="/collections/luxury-pret/velvet" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Velvet Edition </NavLink>
               </div>
             )}
 

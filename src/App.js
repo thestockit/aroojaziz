@@ -10,10 +10,12 @@ import Shop from "./pages/Shop";
 import ProductDetail from "./pages/ProductDetail";
 import CategoryPage from "./pages/CategoryPage"; // ✅ New dynamic page
 
+
 // Components
 import Checkout from "./components/Checkout";
 import ShopProduct from "./components/ShopProduct";
 import VideoSection from "./components/VideoSection";
+
 
 // Context
 import { AuthProvider } from "./context/AuthContext";

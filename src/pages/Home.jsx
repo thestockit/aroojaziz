@@ -1,110 +1,78 @@
-import React, { useState, useEffect } from "react";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import React from "react";
 import { Link } from "react-router-dom";
 
-// 1. IMPORT THE NEW COMPONENTS
-import ProductGrid from "../components/QuickView/ProductGrid";
-import { products } from "../components/QuickView/ProductsData";
-
-import img1 from "../assets/banner-new-again.webp";
-import img2 from "../assets/banner-aaria.png";
-import mobile1 from "../assets/mobile-1.png";
-import mobile2 from "../assets/banner-new-again.webp";
-
+// 1. COMPONENT IMPORTS
+import Hero from "../components/Hero";
 import Category from "../components/Category";
 import TextImage from "../components/TextImage";
 import VideoSection from "../components/VideoSection";
+import ProductGrid from "../components/QuickView/ProductGrid";
+
+// ✅ ENSURE: This points to your master data file
+import { products } from "../data/products"; 
 
 const Home = () => {
-  const [current, setCurrent] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  // Velvet filter for the featured section
+  const velvetProducts = products.filter((p) => p.subcategory?.toLowerCase() === "velvet");
 
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const desktopSlides = [img1, img2];
-  const mobileSlides = [mobile1, mobile2];
-  const slides = isMobile ? mobileSlides : desktopSlides;
-
-  const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length);
-  const prevSlide = () => setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-
-  // Velvet filter from your data
-  const velvetProducts = products.filter((p) => p.category === "velvet");
+  // Best Sellers filter (or just show the first 4 products)
+  const bestSellers = products.slice(0, 4);
 
   return (
     <>
-      {/* Banner Section */}
-      <section className="relative w-full h-[350px] sm:h-[450px] md:h-[600px] lg:h-[700px] overflow-hidden">
-        {slides.map((img, index) => (
-          <img
-            key={index}
-            src={img}
-            alt="Banner"
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
-              index === current ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        ))}
-        <div className="absolute inset-0 bg-black/20 z-10"></div>
-        <button onClick={prevSlide} className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 text-white hover:scale-110 transition hidden md:flex">
-          <FaAngleLeft size={38} />
-        </button>
-        <button onClick={nextSlide} className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 text-white hover:scale-110 transition hidden md:flex">
-          <FaAngleRight size={38} />
-        </button>
-      </section>
+      {/* ✅ NEW HERO COMPONENT (Handles its own images and responsiveness) */}
+      <Hero />
 
+      {/* CATEGORY LINKS */}
       <Category />
 
-{/* BEST SELLERS SECTION */}
-<section className="py-20 bg-white">
-  <div className="container mx-auto px-4 text-center">
-    <div className="mb-12">
-      <h2 className="text-[24px] font-heading font-normal text-[#171717] mb-2">
-        Best Sellers
-      </h2>
-      <Link 
-        to="/collections/luxury-pret"
-        className="text-[11.25px] font-body font-medium uppercase tracking-[0.2em] text-[#C16452] underline underline-offset-[6px] decoration-[1px] hover:opacity-80 transition-opacity"
-      >
-        View All
-      </Link>
-    </div>
-    
-    <ProductGrid products={products} />
-  </div>
-</section>
+      {/* BEST SELLERS SECTION */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <div className="mb-12">
+            <h2 className="text-[24px] font-serif font-normal text-[#171717] mb-2 uppercase tracking-widest">
+              Best Sellers
+            </h2>
+            <Link 
+              to="/collections/luxury-pret"
+              className="text-[11px] font-medium uppercase tracking-[0.2em] text-[#C16452] underline underline-offset-[6px] decoration-[1px] hover:opacity-80 transition-opacity"
+            >
+              View All
+            </Link>
+          </div>
+          
+          <ProductGrid products={bestSellers} />
+        </div>
+      </section>
 
+      {/* PROMOTIONAL TEXT IMAGE SECTION */}
       <TextImage />
 
- {/* VELVET COLLECTION SECTION */}
-<section className="py-20 bg-white">
-  <div className="container mx-auto px-4 text-center">
-    <div className="mb-12">
-      <h2 className="text-[24px] font-heading font-normal text-[#171717] mb-2">
-        The Velvet Collection
-      </h2>
-      <Link 
-        to="/collections/luxury-pret" 
-        className="text-[11.25px] font-body font-medium uppercase tracking-[0.2em] text-[#C16452] underline underline-offset-[6px] decoration-[1px] hover:opacity-80 transition-opacity"
-      >
-        View All
-      </Link>
-    </div>
-    
-    <ProductGrid products={velvetProducts} />
-  </div>
-</section>
+      {/* VELVET COLLECTION SECTION */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <div className="mb-12">
+            <h2 className="text-[24px] font-serif font-normal text-[#171717] mb-2 uppercase tracking-widest">
+              The Velvet Collection
+            </h2>
+            <Link 
+              to="/collections/formal/velvet" 
+              className="text-[11px] font-medium uppercase tracking-[0.2em] text-[#C16452] underline underline-offset-[6px] decoration-[1px] hover:opacity-80 transition-opacity"
+            >
+              View All
+            </Link>
+          </div>
+          
+          <ProductGrid products={velvetProducts} />
+        </div>
+      </section>
 
+      {/* CINEMATIC VIDEO SECTION */}
       <VideoSection />
       
-      {/* WhatsApp Floating Button */}
+      {/* WHATSAPP FLOATING BUTTON */}
       <a
-        href={`https://wa.me/923108067450`}
+        href="https://wa.me/923108067450"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-[#25D366] p-4 rounded-full shadow-lg hover:scale-110 transition-transform z-50"
