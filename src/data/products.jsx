@@ -16,9 +16,8 @@ import asward2 from "../assets/Bridal/Zebaish/Aswaad/2.webp";
 import asward3 from "../assets/Bridal/Zebaish/Aswaad/3.webp";
 import asward4 from "../assets/Bridal/Zebaish/Aswaad/4.webp";
 import asward5 from "../assets/Bridal/Zebaish/Aswaad/5.webp";
-import asward6 from "../assets/Bridal/Zebaish/Aswaad/6.webp";
 import asward7 from "../assets/Bridal/Zebaish/Aswaad/7.webp";
-import asward8 from "../assets/Bridal/Zebaish/Aswaad/8.webp";
+
 
 import gul1 from "../assets/Bridal/Zebaish/Gul-E-Surkh/1.webp";
 import gul2 from "../assets/Bridal/Zebaish/Gul-E-Surkh/2.webp";
@@ -393,7 +392,7 @@ export const products = [
     name: "ASWAAD",
     category: "bridal",
     subcategory: "zebaish",
-    images: [asward1, asward2, asward3, asward4, asward5, asward6, asward7, asward8,],
+    images: [asward1, asward2, asward3, asward4, asward5, asward7,],
     description: "A 3 piece article which consists of raw silk Lehnga, raw silk choli and organza dupatta! The article is beautifully hand embellished using applique work technique, dabka, kora, crystals and swarovski",
     colors: ["Black and Gold"],
     shippingTime: "7-8 weeks",
