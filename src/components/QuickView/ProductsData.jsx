@@ -117,7 +117,7 @@ export const products = [
     id: 5,
     slug: "shahana-bridal-red",
     name: "Bridal - Shahana",
-    description: "Traditional maroon bridal wear with heavy zardozi craftsmanship.",
+    description: "A classic red bridal attire which more than an outfit is a piece of art. The intricate details and complex handwork techniques make this out super classic! Farshi lehnga choli with a dramatic back trail.",
     images: [rabia2, rabia1, rabia3],
   },
   {

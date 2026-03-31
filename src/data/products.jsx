@@ -383,7 +383,7 @@ export const products = [
     description: "A classic red bridal attire which more than an outfit is a piece of art. The intricate details and complex handwork techniques make this out super classic! Farshi lehnga choli with a dramatic back trail.",
     colors: ["Crimson Red"],
     shippingTime: "7-8 weeks",
-    fabricDetails: { Lengha: "Korean Net", Choli: "Korean Net", Dupatta: "Korean Net" },
+    fabricDetails: { Choli: "Korean Net", Lengha: "Korean Net",  Dupatta: "Korean Net" },
     customization: "For Customization please contact our Fashion consultant.",
   },
     {
@@ -393,10 +393,10 @@ export const products = [
     category: "bridal",
     subcategory: "zebaish",
     images: [asward1, asward2, asward3, asward4, asward5, asward7,],
-    description: "A 3 piece article which consists of raw silk Lehnga, raw silk choli and organza dupatta! The article is beautifully hand embellished using applique work technique, dabka, kora, crystals and swarovski",
-    colors: ["Black and Gold"],
+    description: "A regal black outfit adorned using traditional hand work techniques yet with modern and contemporary elements. A black lehnga choli is made of raw silk, hand embellished using traditional applique work technique, zardosi and cut dana. Eye pleasing hues used in appliques add class and make it ethnic. A stunning organza dupatta with hand embellished pallu and jamawaar facings complete the look",
+    colors: ["black"],
     shippingTime: "7-8 weeks",
-    fabricDetails: { Gown: "Zari net", Lehnga: "Organza", Dupatta: "crinkle chiffon" },
+    fabricDetails: { Choli: "raw silk", Lehnga: "raw silk", Dupatta: "organza" },
   },
       {
     id: 52,
@@ -405,10 +405,10 @@ export const products = [
     category: "bridal",
     subcategory: "zebaish",
     images: [gul1, gul2, gul3, gul4, gul5, gul6, gul7, gul8],
-    description: "Where tradition meets elegance ♥️ An exquisite Pistacheau green article which consists of a peshawas made on pure zari tissue with handwork using mocaish, mirror, resham and zardosi work. The pehswas is paired with a pure tissue silk Lehnga with hand paint borders further enhanced with intricate hand embellishments. The dupatta is made on pure crinkle chiffon with a loaded mocaish work border and heavy hand embellished motifs using mirror, resham and mocaish work!!",
-    colors: ["Pistacheau green"],
+    description: "A subtle vine red hue of the attire is such a treat to eyes. If is adorned and embellished aesthetically with bronze gold Zardosi work using Dabka, Kora, Nakhshi, Tilla, Crystals, beads, Swarovski and Silk thread. The embroidery pattern is an exemplary blend of floral and architectural patterns inspired by Islamic architecture. The perfect stitching pattern and silhouette makes the outfit a class apart.",
+    colors: ["Wine Red"],
     shippingTime: "3 to 4 months",
-    fabricDetails: { Gown: "Zari net", Lehnga: "Organza", Dupatta: "crinkle chiffon" },
+    fabricDetails: { Choli: "Crinkle Chiffon", Lehnga: "Raw Silk", Dupatta: "Crinkle Chiffon" },
   },
 
 
