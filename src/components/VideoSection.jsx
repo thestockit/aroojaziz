@@ -10,7 +10,7 @@ const VideoSection = () => {
       {/* CONTAINER: 
           Reduced from 450px/600px to 400px/500px for a sleeker, more refined look.
       */}
-      <div className="relative w-full h-[400px] sm:h-[500px] overflow-hidden bg-black shadow-sm">
+      <div className="relative w-full h-[350px] sm:h-[350px] overflow-hidden bg-black shadow-sm">
         
         {/* THE VIDEO: 
             - 'object-cover' is doing the heavy lifting here.
