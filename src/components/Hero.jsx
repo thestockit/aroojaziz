@@ -8,7 +8,6 @@ import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import pc1 from '../assets/Banner/pc1.webp';
 import pc2 from '../assets/Banner/pc2.png';
 import m1 from '../assets/Banner/m1.webp';
-import m2 from '../assets/Banner/m2.webp';
 import m3 from '../assets/Banner/m3.webp';
 
 // ✅ REQUIRED CSS
@@ -19,7 +18,7 @@ import 'swiper/css/effect-fade';
 const Hero = () => {
   const slides = [
     { id: 1, desktop: pc1, mobile: m1 },
-    { id: 2, desktop: pc2, mobile: m2 },
+    { id: 2, desktop: pc2, },
     { id: 3, desktop: pc1, mobile: m3 }, // Using pc1 as placeholder for 3rd slide
   ];
 

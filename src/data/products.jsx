@@ -16,7 +16,12 @@ import asward2 from "../assets/Bridal/Zebaish/Aswaad/2.webp";
 import asward3 from "../assets/Bridal/Zebaish/Aswaad/3.webp";
 import asward4 from "../assets/Bridal/Zebaish/Aswaad/4.webp";
 import asward5 from "../assets/Bridal/Zebaish/Aswaad/5.webp";
-import asward7 from "../assets/Bridal/Zebaish/Aswaad/7.webp";
+import asward8 from "../assets/Bridal/Zebaish/Black/1.webp"
+import asward9 from "../assets/Bridal/Zebaish/Black/7.webp"
+import asward10 from "../assets/Bridal/Zebaish/Black/8.webp"
+import asward11 from "../assets/Bridal/Zebaish/Black/9.webp"
+import asward12 from "../assets/Bridal/Zebaish/Black/10.webp"
+
 
 
 import gul1 from "../assets/Bridal/Zebaish/Gul-E-Surkh/1.webp";
@@ -392,7 +397,7 @@ export const products = [
     name: "ASWAAD",
     category: "bridal",
     subcategory: "zebaish",
-    images: [asward1, asward2, asward3, asward4, asward5, asward7,],
+    images: [asward8, asward9, asward10, asward11, asward12, asward1, asward2, asward3, asward4, asward5,],
     description: "A regal black outfit adorned using traditional hand work techniques yet with modern and contemporary elements. A black lehnga choli is made of raw silk, hand embellished using traditional applique work technique, zardosi and cut dana. Eye pleasing hues used in appliques add class and make it ethnic. A stunning organza dupatta with hand embellished pallu and jamawaar facings complete the look",
     colors: ["black"],
     shippingTime: "3 to 4 months",
