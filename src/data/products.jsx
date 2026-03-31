@@ -395,7 +395,7 @@ export const products = [
     images: [asward1, asward2, asward3, asward4, asward5, asward7,],
     description: "A regal black outfit adorned using traditional hand work techniques yet with modern and contemporary elements. A black lehnga choli is made of raw silk, hand embellished using traditional applique work technique, zardosi and cut dana. Eye pleasing hues used in appliques add class and make it ethnic. A stunning organza dupatta with hand embellished pallu and jamawaar facings complete the look",
     colors: ["black"],
-    shippingTime: "7-8 weeks",
+    shippingTime: "3 to 4 months",
     fabricDetails: { Choli: "raw silk", Lehnga: "raw silk", Dupatta: "organza" },
   },
       {
