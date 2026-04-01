@@ -1,7 +1,8 @@
 // src/data/ThreePcProductsData.js
-import img1 from "../../src/assets/3pc/shahana.webp";
-import img11 from "../../src/assets/3pc/sha3.webp";
-import img12 from "../../src/assets/3pc/sha4.webp";
+import meh1 from "../../src/assets/Bridal/Couture-2026/Mehwar/1.webp";
+import meh2 from "../../src/assets/Bridal/Couture-2026/Mehwar/2.webp";
+import meh3 from "../../src/assets/Bridal/Couture-2026/Mehwar/1.webp";
+
 
 import img2 from "../../src/assets/3pc/rgisq2.webp";
 import img13 from "../../src/assets/3pc/rgisq3.webp";
@@ -18,8 +19,8 @@ import img18 from "../../src/assets/3pc/taber3.webp";
 export const products = [
   {
     id: 3,
-    images: [img1, img11, img12], // 👈 change to array
-    name: "SHAHANA",
+    images: [meh1, meh2, meh3], // 👈 change to array
+    name: "MEHWAR",
     description:
       " A classic red bridal attire which more than an outfit is a piece of art. The intricate details and complex handwork techniques and details make this out super classic! Farshi lehnga choli with a dramatic back trail is beautifully embellished with Gold Dabka, Swarovski, Resham, Crystals, Beads, diamonties and sequence. Details like FAREESHIA stitched in the attire bring such beauty and class. Shade of Aubergine added in the borders pleases eyes. Net Dupatta with detailed Borders and Motifs on corners completes the outfi",
     colors: ["Jet Black Gold"],

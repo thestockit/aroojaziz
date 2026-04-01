@@ -1,34 +1,43 @@
-import React, { useRef } from "react";
+import React from "react";
 
 const VideoSection = () => {
-  const videoRef = useRef(null);
-
   return (
-    /* py-12 sm:py-16: Slightly reduced the section padding to match the shorter video */
-    <section className="w-full bg-white py-12 sm:py-16">
-      
-      {/* CONTAINER: 
-          Reduced from 450px/600px to 400px/500px for a sleeker, more refined look.
-      */}
-      <div className="relative w-full h-[350px] sm:h-[350px] overflow-hidden bg-black shadow-sm">
-        
-        {/* THE VIDEO: 
-            - 'object-cover' is doing the heavy lifting here.
-            - Kept the centering logic (top-1/2 left-1/2 -translate) for perfect alignment.
-        */}
+    <section className="w-full bg-white pt-12 sm:pt-16 pb-0">
+      <div className="relative w-full h-[400px] sm:h-[500px] overflow-hidden bg-[#f7f1f0]">
+
+        {/* MOBILE VIDEO */}
         <video
-          ref={videoRef}
-          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto object-cover -translate-x-1/2 -translate-y-1/2 
-                     scale-[1.8] sm:scale-[1.2] transition-transform duration-1000"
-          src="https://res.cloudinary.com/dqant0dxx/video/upload/v1771398440/Gulbadan_Aroojaziz_axfelx.webm"
+          /* FIX: We use 'scale-[1.25]' to zoom in just enough to push 
+             the black strips outside the 'overflow-hidden' container. 
+          */
+          className="absolute inset-0 w-full h-full object-cover block sm:hidden scale-[1.25]"
+          /* Added 'c_crop,g_center' logic to Cloudinary URL to help 
+             the server focus on the center content 
+          */
+          src="https://res.cloudinary.com/dqant0dxx/video/upload/c_fill,ar_3:4,g_auto/q_auto:best/v1771398440/Gulbadan_Aroojaziz_axfelx.webm"
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
         />
 
-        {/* Optional: Subtle Overlay for a more premium feel */}
-        <div className="absolute inset-0 bg-black/5 pointer-events-none" />
+        {/* DESKTOP VIDEO */}
+        <video
+          /* Desktop bars are usually thinner, so 'scale-[1.15]' 
+             is usually enough to hide them without losing quality.
+          */
+          className="absolute inset-0 w-full h-full object-cover hidden sm:block scale-[1.15]"
+          src="https://res.cloudinary.com/dqant0dxx/video/upload/c_fill,ar_16:9,g_auto/q_auto:best/v1771398440/Gulbadan_Aroojaziz_axfelx.webm"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        />
+
+        {/* Dark overlay to blend the video into the site */}
+        <div className="absolute inset-0 bg-black/10 pointer-events-none" />
       </div>
     </section>
   );

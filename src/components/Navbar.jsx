@@ -45,8 +45,8 @@ const Navbar = () => {
           <span className="hidden md:block w-px h-3 bg-gray-300/60" />
 
           <div className="flex items-center gap-7">
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-[#171717]"><FaFacebookF size={13} /></a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-[#171717]"><FaInstagram size={14} /></a>
+            <a href="https://www.facebook.com/p/Arooj-Aziz-100063690026718/" target="_blank" rel="noreferrer" className="hover:text-[#171717]"><FaFacebookF size={13} /></a>
+            <a href="https://www.instagram.com/aroojaziz_/" target="_blank" rel="noreferrer" className="hover:text-[#171717]"><FaInstagram size={14} /></a>
             <a href="https://wa.me/923330601258?text=Hi%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" rel="noreferrer" className="hover:text-[#171717]"><FaWhatsapp size={15} /></a>
           </div>
         </div>

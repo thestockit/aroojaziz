@@ -271,7 +271,6 @@ import bahaar4 from "../assets/Formal/Bahaar/4.jpg";
 import bahaar5 from "../assets/Formal/Bahaar/5.jpg";
 import bahaar6 from "../assets/Formal/Bahaar/6.jpg";
 import bahaar7 from "../assets/Formal/Bahaar/7.jpg";
-import bahaar8 from "../assets/Formal/Bahaar/8.jpg";
 import bahaar9 from "../assets/Formal/Bahaar/9.jpg";
 import bahaar10 from "../assets/Formal/Bahaar/10.jpg";
 import bahaar11 from "../assets/Formal/Bahaar/11.jpg";
@@ -400,7 +399,7 @@ export const products = [
     images: [asward8, asward9, asward10, asward11, asward12, asward1, asward2, asward3, asward4, asward5,],
     description: "A regal black outfit adorned using traditional hand work techniques yet with modern and contemporary elements. A black lehnga choli is made of raw silk, hand embellished using traditional applique work technique, zardosi and cut dana. Eye pleasing hues used in appliques add class and make it ethnic. A stunning organza dupatta with hand embellished pallu and jamawaar facings complete the look",
     colors: ["black"],
-    shippingTime: "3 to 4 months",
+    shippingTime: "9 to 10 weeks",
     fabricDetails: { Choli: "raw silk", Lehnga: "raw silk", Dupatta: "organza" },
   },
       {
@@ -607,7 +606,7 @@ export const products = [
     name: "BAHAAR",
     category: "formal",
     subcategory: "formal",
-    images: [bahaar1, bahaar2, bahaar3, bahaar4, bahaar5, bahaar6, bahaar7, bahaar8, bahaar9, bahaar10, bahaar11, bahaar12],
+    images: [bahaar1, bahaar2, bahaar3, bahaar4, bahaar5, bahaar6, bahaar7, bahaar9, bahaar10, bahaar11, bahaar12],
     description: "Look at this bright Neon yellow Pishwas. Isn't it a treat to eyes. Traditional gota work Pishwas with bright appliques and gold hand embroidery makes it a perfect outfit to brighten up your mayun/ mehndi day. Chatta Patti Dupatta with handwork borders makes the attire flawless and worth it.",
     colors: ["Neon Yellow"],
     shippingTime: "2 Months",
@@ -834,9 +833,9 @@ export const products = [
     category: "bridal",
     subcategory: "bridal-couture-2026",
     images: [img4, img1, img2, img3,  img5, img6, img7, img8, img9, img10, img11, img12, img13, img14],
-    description: "Where tradition meets elegance ♥️ An exquisite Pistacheau green article which consists of a peshawas made on pure zari tissue with handwork using mocaish, mirror, resham and zardosi work. The pehswas is paired with a pure tissue silk Lehnga with hand paint borders further enhanced with intricate hand embellishments. The dupatta is made on pure crinkle chiffon with a loaded mocaish work border and heavy hand embellished motifs using mirror, resham and mocaish work!!",
+    description: "An exquisite Pistacheau green article which consists of a peshawas made on pure zari tissue with handwork using mocaish, mirror, resham and zardosi work. The pehswas is paired with a pure tissue silk Lehnga with hand paint borders further enhanced with intricate hand embellishments. The dupatta is made on pure crinkle chiffon with a loaded mocaish work border and heavy hand embellished motifs using mirror, resham and mocaish work!!",
     colors: ["Pistacheau green"],
-    shippingTime: "3 to 4 months",
+    shippingTime: "8 to 9 weeks",
     fabricDetails: { Gown: "Zari net", Lehnga: "Organza", Dupatta: "crinkle chiffon" },
   },
   
