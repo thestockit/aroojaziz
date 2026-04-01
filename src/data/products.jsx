@@ -147,6 +147,18 @@ import airaRed8 from "../assets/AAIRA/Red/8.jpg";
 import airaRed9 from "../assets/AAIRA/Red/9.jpg";
 import airaRed10 from "../assets/AAIRA/Red/10.jpg";
 
+// --- AAIRA Olive-Green (10 images) ---
+import Oli1 from "../assets/AAIRA/Olive-Green/1.webp";
+import Oli2 from "../assets/AAIRA/Olive-Green/2.webp";
+import Oli3 from "../assets/AAIRA/Olive-Green/3.webp";
+import Oli4 from "../assets/AAIRA/Olive-Green/4.webp";
+import Oli5 from "../assets/AAIRA/Olive-Green/5.webp";
+import Oli6 from "../assets/AAIRA/Olive-Green/6.webp";
+import Oli7 from "../assets/AAIRA/Olive-Green/7.webp";
+import Oli8 from "../assets/AAIRA/Olive-Green/8.webp";
+import Oli9 from "../assets/AAIRA/Olive-Green/9.webp";
+
+
 // --- JET BLACK (10 Images) ---
 import jb1 from "../assets/Wania/Jet-Black/1.webp";
 import jb2 from "../assets/Wania/Jet-Black/2.webp";
@@ -439,7 +451,7 @@ export const products = [
     category: "bridal",
     subcategory: "gulbadan",
     images: [pearlMain],
-    description: "The perfect blend of elegance and sophistication. This pearl white bridal attire is a class apart. Raw silk  lehnga choli is hand embesllished beautifully using pearls, beads, swarovskies, diamonties, kora, dabka and resham threads! Hues of gold and resham make it more eye pleasing. Lehnga choli is blended with a subtle organza dupatta with cutwork borders and dense chan booti. exquisite embroidery, intricate details, and pure fabrics make the attire wholesome and worth it❤️",
+    description: "The perfect blend of elegance and sophistication. This pearl white bridal attire is a class apart. Raw silk  lehnga choli is hand embesllished beautifully using pearls, beads, swarovskies, diamonties, kora, dabka and resham threads! Hues of gold and resham make it more eye pleasing. Lehnga choli is blended with a subtle organza dupatta with cutwork borders and dense chan booti. exquisite embroidery, intricate details, and pure fabrics make the attire wholesome and worth it",
     colors: ["Pearl White"],
     shippingTime: "3 months",
     fabricDetails: { Choli: "Pure Raw silk", Lehnga: "Pure Raw silk", Dupatta: "Organza" },
@@ -556,6 +568,21 @@ export const products = [
     customization: "For Customization please contact our Fashion consultant.",
     note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
   },
+  {
+    id: 60,
+    slug: "aaira-olive-green",
+    name: "AAIRA | Olive green",
+    category: "luxury-pret",
+    subcategory: "aaira",
+    images: [Oli1, Oli2, Oli3, Oli4, Oli5, Oli6, Oli7, Oli8, Oli9],
+    description: "A fluorescent and rich attire to brighten up your festives.",
+    colors: ["Olive Green and Burnt Orange"],
+    shippingTime: "5-6 Weeks",
+    fabricDetails: { Lengha: "Banarsi Chiffon", Pishwaas: "Crinkle Chiffon", Dupatta: "Net" },
+    customization: "For Customization please contact our Fashion consultant.",
+    note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot."
+  },
+
 
   // --- FORMAL ---
   {
