@@ -661,7 +661,7 @@ export const products = [
     name: "DILJAAN",
     category: "formal",
     subcategory: "formal",
-    images: [diljaan1, diljaan2, diljaan3, diljaan4, diljaan5, diljaan6, diljaan7, diljaan8, diljaan9],
+    images: [diljaan4, diljaan1, diljaan2, diljaan3, diljaan5, diljaan6, diljaan7, diljaan8, diljaan9],
     description: "An ethnic pishwas with a classy silhouette and zardosi work blended with a velvet shawl. Shawl's embroidery pattern is a blend of floral and geometric patterns inspired from Mughal architecture.",
     colors: ["Deep Maroon"],
     shippingTime: "5-6 Weeks",
