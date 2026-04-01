@@ -22,6 +22,26 @@ import asward10 from "../assets/Bridal/Zebaish/Black/8.webp"
 import asward11 from "../assets/Bridal/Zebaish/Black/9.webp"
 import asward12 from "../assets/Bridal/Zebaish/Black/10.webp"
 
+import lal1 from "../assets/Bridal/Gulbadan/Lal-Ishq/1.jpg"
+import lal2 from "../assets/Bridal/Gulbadan/Lal-Ishq/2.jpg"
+import lal3 from "../assets/Bridal/Gulbadan/Lal-Ishq/3.jpg"
+import lal4 from "../assets/Bridal/Gulbadan/Lal-Ishq/4.jpg"
+import lal5 from "../assets/Bridal/Gulbadan/Lal-Ishq/5.jpg"
+import lal6 from "../assets/Bridal/Gulbadan/Lal-Ishq/6.jpg"
+import lal7 from "../assets/Bridal/Gulbadan/Lal-Ishq/7.jpg"
+import lal8 from "../assets/Bridal/Gulbadan/Lal-Ishq/8.JPG"
+import lal9 from "../assets/Bridal/Gulbadan/Lal-Ishq/9.JPG"
+
+import hu1 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/1.jpg"
+import hu2 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/2.jpg"
+import hu3 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/3.jpg"
+import hu4 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/4.jpg"
+import hu5 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/5.jpg"
+import hu6 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/6.jpg"
+import hu7 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/7.jpg"
+import hu8 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/8.jpg"
+import hu9 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/9.jpg"
+
 
 
 import gul1 from "../assets/Bridal/Zebaish/Gul-E-Surkh/1.webp";
@@ -864,6 +884,30 @@ export const products = [
     colors: ["Pistacheau green"],
     shippingTime: "8 to 9 weeks",
     fabricDetails: { Gown: "Zari net", Lehnga: "Organza", Dupatta: "crinkle chiffon" },
+  },
+  {
+    id: 52,
+    slug: "bridal-lal-ishq",
+    name: "LAL ISHQ",
+    category: "bridal",
+    subcategory: "gulbadan",
+    images: [lal1, lal2, lal3, lal4, lal5, lal6, lal7, lal8, lal9],
+    description: "A crimson red shirt with super classy and intricate architectural and floral patterns blended with such an eye pleasing way. A v royal and traditional raw silk gharara again constructed in such an artistic way. The stunning attire comes with two dupattas the red one for drapping on head and the rust one for drapping on arms. The pleasant shades of red and burnt orange, traditional silhouette and detailed and intricate embellishments make the outfit to die for and worth wearing on your big day.",
+    colors: ["Crimson Red"],
+    shippingTime: "8 to 9 weeks",
+    fabricDetails: { Shirt: "Crimson Red", Gharara: "Crimson Red", Dupatta: "Crimson Red" },
+  },
+  {
+    id: 53,
+    slug: "bridal-husn-e-jahan",
+    name: "HUSN E JAHAN",
+    category: "bridal",
+    subcategory: "gulbadan",
+    images: [hu1, hu2, hu3, hu4, hu5, hu6, hu7, hu8, hu9],
+    description: "Presenting a master piece from GULBADAN. This exquisite bridal is a modern silhouette with traditional and classy hand embroidery. Hues of resham are stitched with intricacy and blended beautifully with gold and silver cora, dabka and crystal work. The eye pleasing color combo of ivory , peach and a beautiful tone of olive soothes the eyes and brings a charm. The detailing in handwork and the quality stitching makes the outfit classy in its own way.",
+    colors: ["Crimson Red"],
+    shippingTime: "8 to 9 weeks",
+    fabricDetails: { Peplum: "Ivory", Lehnga: "Ivory", Dupatta: "Olive Green" },
   },
   
 
