@@ -16,7 +16,9 @@ const Home = () => {
   const velvetProducts = products.filter((p) => p.subcategory?.toLowerCase() === "velvet");
 
   // Best Sellers filter (or just show the first 4 products)
-  const bestSellers = products.slice(0, 4);
+  const bestSellers = products
+    .filter((p) => p.isBestSeller === true)
+    .slice(0, 8); // This ensures you never show more than 8, even if you tag 10
 
   return (
     <>

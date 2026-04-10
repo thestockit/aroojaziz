@@ -83,16 +83,6 @@ const QuickViewDrawer = ({ product, onClose }) => {
             </div>
 
             {/* Size Options */}
-            <div>
-              <p className="text-[11px] font-medium uppercase tracking-[0.1em] mb-3 text-[#171717]">Size</p>
-              <div className="flex flex-wrap gap-2">
-                {['XS', 'S', 'M', 'L', 'XL'].map(s => (
-                  <button key={s} className="min-w-[50px] h-10 border border-gray-200 text-[12px] hover:border-black transition uppercase bg-white text-[#707173] hover:text-black">
-                    {s}
-                  </button>
-                ))}
-              </div>
-            </div>
           </div>   
           
           <button 

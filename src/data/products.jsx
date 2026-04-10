@@ -3,6 +3,76 @@
 // ==========================================
 
 // --- BRIDAL COLLECTIONS ---
+import aas1 from "../assets/Bridal/Couture-2026/Aashna/1.webp";
+import aas2 from "../assets/Bridal/Couture-2026/Aashna/2.webp";
+import aas3 from "../assets/Bridal/Couture-2026/Aashna/3.webp";
+import aas4 from "../assets/Bridal/Couture-2026/Aashna/4.webp";
+import aas5 from "../assets/Bridal/Couture-2026/Aashna/5.webp";
+import aas6 from "../assets/Bridal/Couture-2026/Aashna/6.webp";
+import aas7 from "../assets/Bridal/Couture-2026/Aashna/7.webp";
+import aas8 from "../assets/Bridal/Couture-2026/Aashna/8.webp";
+import aas9 from "../assets/Bridal/Couture-2026/Aashna/9.webp";
+import aas10 from "../assets/Bridal/Couture-2026/Aashna/10.webp";
+import aas11 from "../assets/Bridal/Couture-2026/Aashna/11.webp";
+import aas12 from "../assets/Bridal/Couture-2026/Aashna/12.webp";
+import aas13 from "../assets/Bridal/Couture-2026/Aashna/13.webp";
+import aas14 from "../assets/Bridal/Couture-2026/Aashna/14.webp";
+import aas15 from "../assets/Bridal/Couture-2026/Aashna/15.webp";
+import aas16 from "../assets/Bridal/Couture-2026/Aashna/16.webp";
+
+import ara1 from "../assets/Bridal/Couture-2026/Araasta/1.webp";
+import ara2 from "../assets/Bridal/Couture-2026/Araasta/2.webp";
+import ara3 from "../assets/Bridal/Couture-2026/Araasta/3.webp";
+import ara4 from "../assets/Bridal/Couture-2026/Araasta/4.webp";
+import ara5 from "../assets/Bridal/Couture-2026/Araasta/5.webp";
+import ara6 from "../assets/Bridal/Couture-2026/Araasta/6.webp";
+import ara7 from "../assets/Bridal/Couture-2026/Araasta/7.webp";
+import ara8 from "../assets/Bridal/Couture-2026/Araasta/8.webp";
+import ara9 from "../assets/Bridal/Couture-2026/Araasta/9.webp";
+import ara10 from "../assets/Bridal/Couture-2026/Araasta/10.webp";
+import ara11 from "../assets/Bridal/Couture-2026/Araasta/11.webp";
+import ara12 from "../assets/Bridal/Couture-2026/Araasta/12.webp";
+import ara13 from "../assets/Bridal/Couture-2026/Araasta/13.webp";
+import ara14 from "../assets/Bridal/Couture-2026/Araasta/14.webp";
+import ara15 from "../assets/Bridal/Couture-2026/Araasta/15.webp";
+import ara16 from "../assets/Bridal/Couture-2026/Araasta/16.webp";
+
+
+import bla1 from "../assets/Bridal/Couture-2026/Blaze/1.webp";
+import bla2 from "../assets/Bridal/Couture-2026/Blaze/2.webp";
+import bla3 from "../assets/Bridal/Couture-2026/Blaze/3.webp";
+import bla4 from "../assets/Bridal/Couture-2026/Blaze/4.webp";
+import bla5 from "../assets/Bridal/Couture-2026/Blaze/5.webp";
+import bla6 from "../assets/Bridal/Couture-2026/Blaze/6.webp";
+import bla7 from "../assets/Bridal/Couture-2026/Blaze/7.webp";
+import bla8 from "../assets/Bridal/Couture-2026/Blaze/8.webp";
+import bla9 from "../assets/Bridal/Couture-2026/Blaze/9.webp";
+import bla10 from "../assets/Bridal/Couture-2026/Blaze/10.webp";
+import bla11 from "../assets/Bridal/Couture-2026/Blaze/11.webp";
+import bla12 from "../assets/Bridal/Couture-2026/Blaze/12.webp";
+import bla13 from "../assets/Bridal/Couture-2026/Blaze/13.webp";
+import bla14 from "../assets/Bridal/Couture-2026/Blaze/14.webp";
+
+import mah1 from "../assets/Bridal/Couture-2026/Maheen/1.webp";
+import mah2 from "../assets/Bridal/Couture-2026/Maheen/2.webp";
+import mah3 from "../assets/Bridal/Couture-2026/Maheen/3.webp";
+import mah4 from "../assets/Bridal/Couture-2026/Maheen/4.webp";
+import mah5 from "../assets/Bridal/Couture-2026/Maheen/5.webp";
+import mah6 from "../assets/Bridal/Couture-2026/Maheen/6.webp";
+import mah7 from "../assets/Bridal/Couture-2026/Maheen/7.webp";
+import mah8 from "../assets/Bridal/Couture-2026/Maheen/8.webp";
+import mah9 from "../assets/Bridal/Couture-2026/Maheen/9.webp";
+import mah10 from "../assets/Bridal/Couture-2026/Maheen/10.webp";
+import mah11 from "../assets/Bridal/Couture-2026/Maheen/11.webp";
+import mah12 from "../assets/Bridal/Couture-2026/Maheen/12.webp";
+import mah13 from "../assets/Bridal/Couture-2026/Maheen/13.webp";
+import mah14 from "../assets/Bridal/Couture-2026/Maheen/14.webp";
+import mah15 from "../assets/Bridal/Couture-2026/Maheen/15.webp";
+import mah16 from "../assets/Bridal/Couture-2026/Maheen/16.webp";
+
+
+
+
 import shahana1 from "../assets/Bridal/Zebaish/Shahana/1.webp";
 import shahana2 from "../assets/Bridal/Zebaish/Shahana/2.webp";
 import shahana3 from "../assets/Bridal/Zebaish/Shahana/3.webp";
@@ -16,33 +86,31 @@ import asward2 from "../assets/Bridal/Zebaish/Aswaad/2.webp";
 import asward3 from "../assets/Bridal/Zebaish/Aswaad/3.webp";
 import asward4 from "../assets/Bridal/Zebaish/Aswaad/4.webp";
 import asward5 from "../assets/Bridal/Zebaish/Aswaad/5.webp";
-import asward8 from "../assets/Bridal/Zebaish/Black/1.webp"
-import asward9 from "../assets/Bridal/Zebaish/Black/7.webp"
-import asward10 from "../assets/Bridal/Zebaish/Black/8.webp"
-import asward11 from "../assets/Bridal/Zebaish/Black/9.webp"
-import asward12 from "../assets/Bridal/Zebaish/Black/10.webp"
+import asward8 from "../assets/Bridal/Zebaish/Black/1.webp";
+import asward9 from "../assets/Bridal/Zebaish/Black/7.webp";
+import asward10 from "../assets/Bridal/Zebaish/Black/8.webp";
+import asward11 from "../assets/Bridal/Zebaish/Black/9.webp";
+import asward12 from "../assets/Bridal/Zebaish/Black/10.webp";
 
-import lal1 from "../assets/Bridal/Gulbadan/Lal-Ishq/1.jpg"
-import lal2 from "../assets/Bridal/Gulbadan/Lal-Ishq/2.jpg"
-import lal3 from "../assets/Bridal/Gulbadan/Lal-Ishq/3.jpg"
-import lal4 from "../assets/Bridal/Gulbadan/Lal-Ishq/4.jpg"
-import lal5 from "../assets/Bridal/Gulbadan/Lal-Ishq/5.jpg"
-import lal6 from "../assets/Bridal/Gulbadan/Lal-Ishq/6.jpg"
-import lal7 from "../assets/Bridal/Gulbadan/Lal-Ishq/7.jpg"
-import lal8 from "../assets/Bridal/Gulbadan/Lal-Ishq/8.JPG"
-import lal9 from "../assets/Bridal/Gulbadan/Lal-Ishq/9.JPG"
+import lal1 from "../assets/Bridal/Gulbadan/Lal-Ishq/1.jpg";
+import lal2 from "../assets/Bridal/Gulbadan/Lal-Ishq/2.jpg";
+import lal3 from "../assets/Bridal/Gulbadan/Lal-Ishq/3.jpg";
+import lal4 from "../assets/Bridal/Gulbadan/Lal-Ishq/4.jpg";
+import lal5 from "../assets/Bridal/Gulbadan/Lal-Ishq/5.jpg";
+import lal6 from "../assets/Bridal/Gulbadan/Lal-Ishq/6.jpg";
+import lal7 from "../assets/Bridal/Gulbadan/Lal-Ishq/7.jpg";
+import lal8 from "../assets/Bridal/Gulbadan/Lal-Ishq/8.JPG";
+import lal9 from "../assets/Bridal/Gulbadan/Lal-Ishq/9.JPG";
 
-import hu1 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/1.jpg"
-import hu2 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/2.jpg"
-import hu3 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/3.jpg"
-import hu4 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/4.jpg"
-import hu5 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/5.jpg"
-import hu6 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/6.jpg"
-import hu7 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/7.jpg"
-import hu8 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/8.jpg"
-import hu9 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/9.jpg"
-
-
+import hu1 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/1.jpg";
+import hu2 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/2.jpg";
+import hu3 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/3.jpg";
+import hu4 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/4.jpg";
+import hu5 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/5.jpg";
+import hu6 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/6.jpg";
+import hu7 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/7.jpg";
+import hu8 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/8.jpg";
+import hu9 from "../assets/Bridal/Gulbadan/Husn-E-Jahan/9.jpg";
 
 import gul1 from "../assets/Bridal/Zebaish/Gul-E-Surkh/1.webp";
 import gul2 from "../assets/Bridal/Zebaish/Gul-E-Surkh/2.webp";
@@ -426,6 +494,7 @@ export const products = [
     id: 51,
     slug: "bridal-aswad",
     name: "ASWAAD",
+    isBestSeller: true,
     category: "bridal",
     subcategory: "zebaish",
     images: [asward8, asward9, asward10, asward11, asward12, asward1, asward2, asward3, asward4, asward5,],
@@ -524,6 +593,7 @@ export const products = [
     name: "AAIRA | Lemon Yellow",
     category: "luxury-pret",
     subcategory: "aaira",
+    isBestSeller: true,
     images: [airaLemonYellow1, airaLemonYellow2, airaLemonYellow3, airaLemonYellow4, airaLemonYellow5, airaLemonYellow6, airaLemonYellow7, airaLemonYellow8, airaLemonYellow9, airaLemonYellow10],
     description: "A radiant Lemon Yellow ensemble that captures the essence of luxury pret. The Tassel Silk jacket and pants create a sophisticated silhouette, beautifully complemented by a delicate Net dupatta. Perfect for festive occasions and formal gatherings where you want to make a subtle yet striking statement.",
     colors: ["Lemon Yellow"],
@@ -580,6 +650,7 @@ export const products = [
     name: "AAIRA | Magenta & Yellow",
     category: "luxury-pret",
     subcategory: "aaira",
+    isBestSeller: true, 
     images: [airaMagentaYellow1, airaMagentaYellow3, airaMagentaYellow4, airaMagentaYellow5, airaMagentaYellow6, airaMagentaYellow7, airaMagentaYellow8, airaMagentaYellow9, airaMagentaYellow10, airaMagentaYellow11, airaMagentaYellow12, airaMagentaYellow13, airaMagentaYellow14, airaMagentaYellow15],
     description: "A stunning fusion of Magenta and Yellow in this exquisite ensemble. The Raw Silk Lengha and Choli offer a luxurious texture and fall, while the Organza dupatta adds an ethereal touch. This vibrant combination is perfect for festive celebrations and special occasions where you want to make a bold yet elegant statement.",
     colors: ["Magenta", "Yellow"],
@@ -653,6 +724,7 @@ export const products = [
     name: "BAHAAR",
     category: "formal",
     subcategory: "formal",
+    isBestSeller: true,
     images: [bahaar1, bahaar2, bahaar3, bahaar4, bahaar5, bahaar6, bahaar7, bahaar9, bahaar10, bahaar11, bahaar12],
     description: "Look at this bright Neon yellow Pishwas. Isn't it a treat to eyes. Traditional gota work Pishwas with bright appliques and gold hand embroidery makes it a perfect outfit to brighten up your mayun/ mehndi day. Chatta Patti Dupatta with handwork borders makes the attire flawless and worth it.",
     colors: ["Neon Yellow"],
@@ -769,6 +841,7 @@ export const products = [
     name: "WANIA | Hot Pink",
     category: "luxury-pret",
     subcategory: "wania",
+    isBestSeller: true,
     images: [hp1, hp2, hp3, hp4, hp5, hp6, hp7, hp8, hp9, hp10],
     description: "A symphony of pinks, with a hint of silver and a dash of elegance, this attire consists of a flairy georgette top with sheer neckline which is hand embellished with pearls and swarovski and a sharara with swarovski chan.",
     colors: ["Hot Pink"],
@@ -876,6 +949,7 @@ export const products = [
   {
     id: 50,
     slug: "bridal-mehwar",
+    isBestSeller: true,
     name: "Mehwar",
     category: "bridal",
     subcategory: "bridal-couture-2026",
@@ -884,6 +958,54 @@ export const products = [
     colors: ["Pistacheau green"],
     shippingTime: "8 to 9 weeks",
     fabricDetails: { Gown: "Zari net", Lehnga: "Organza", Dupatta: "crinkle chiffon" },
+  },
+  {
+    id: 54,
+    slug: "bridal-blaze",
+    name: "BLAZE",
+    category: "bridal",
+    subcategory: "bridal-couture-2026",
+    images: [bla1, bla2, bla3, bla4, bla5, bla6, bla7, bla7, bla8, bla9, bla10, bla11, bla12, bla13, bla14,],
+    description: "An ethereal bridal attire to lighten up your big day and make it unforgettable. A radient Red Long Shirt made of pure Zari Khadi Net has the most intricate and detailed Hand Embelishment. The Shirt is ornated with Zardosi and Resham work using Fine and Quality material which includes Dakka, Kora, Crystals, Swaroski, Beads, Tilla and Sequins. The shirt is stiched using Side Dorri technique. The classy shirt is paired with an exquisite Farshi Lehnga made of Pure Banarsi, hand embellished with Cut-Dana and Zardosi Work. The outfit comes with a Pure Zari Khaddi Net dupatta with the most meticulous hand embellished Border and Sequins chan. The Radiant Hue of Red, quality material, flawless and detailed stitching & précised hand embellishment, makes the outfit pristine and exemplary.",
+    colors: ["Venetian Red"],
+    shippingTime: "3 to 4 months",
+    fabricDetails: { Shirt: "Pure Zari Khaddi Net", Lehnga: "Pure Indian Banarsi", Dupatta: "Pure Zari Khaddi Net" },
+  },
+  {
+    id: 55,
+    slug: "bridal-aashna",
+    name: "AASHNA",
+    category: "bridal",
+    subcategory: "bridal-couture-2026",
+    images: [aas1, aas2, aas3, aas4, aas5, aas6, aas7, aas8, aas9, aas10, aas11, aas12, aas13, aas14, aas15, aas16],
+    description: "A majestic bridal attire to make your big day enchanting!! An eye pleasing soft hue of rose pink makes it ravishing. Raw silk Lehnga has the most intricate and detailed hand embellishments using delicate and fine material including crystals, swarovski, beads, sequins, cut dana, tilla, rehsam, dabka, kora and jewel pieces!! The blend of floral and geometric pattern makes it imperial. Lehnga is paired with a raw silk choli with the same intricate hand embellishment details in a unique pattern. Net dupatta has the most regal hand embellished scalloped borders and dense swarovski and sequin chan adds a classy bling and elevates the look.",
+    colors: ["Rose Pink"],
+    shippingTime: "3 to 4 months",
+    fabricDetails: { Choli: "raw silk", Lehnga: "raw silk", Dupatta: "net" },
+  },
+  {
+    id: 56,
+    slug: "bridal-maheen",
+    name: "MAHEEN",
+    category: "bridal",
+    subcategory: "bridal-couture-2026",
+    images: [mah1, mah2, mah3, mah4, mah5, mah6, mah7, mah8, mah9, mah10, mah11, mah12, mah13, mah14, mah15, mah16],
+    description: "A stately bridal costume to adorn you at your big day and set a mark!! A Sea foam green long shirt made of raw silk is hand embellished with meticulous attention to detail!! Delicate hand embroidery using mirror work, dabka, kora, tilla, crystals, sequins, rehsam and swarovski elevates the look. Borders are embellished using fareeshia technique and loaded zardosi work. A sea foam green net dupatta has intricate hand embellished borders and floral jaal on the pallus, another dam green chiffon dupatta adds a class with dense sequin chan and delicate hand embroidery borders!! A royal tassel silk farshi lehnga has a blend of hues of sea foam green and dam green at the lower part! Legnga is screen printed and then further hand embellished using sparkly and delicate stones, crystals, swarovski, cut dana and beads!!",
+    colors: ["Sea Foam Green"],
+    shippingTime: "3 to 4 months",
+    fabricDetails: { Shirt: "raw silk", Lehnga: "tassel silk", Dupatta: "crinkle chiffon" },
+  },
+  {
+    id: 57,
+    slug: "bridal-araasta",
+    name: "ARAASTA",
+    category: "bridal",
+    subcategory: "bridal-couture-2026",
+    images: [ara1, ara2, ara3, ara4, ara5, ara6, ara7, ara8, ara9, ara10, ara11, ara12, ara13, ara14, ara15, ara16,],
+    description: "An enchanting bridal which speaks for itself!! A soothing shade of lavender captivates the eyes!! The article includes a long gown made on net adorned with lavishly hand embellishments using contemporary techniques and sparkly materials like crystals, sequins, diamonties, swarovski, beads and cut dana! The gown is paired with a pure shamoz silk Lehnga with floral hand embellished borders. And to finish the look comes a net dupatta with intricate hand embellished borders and chan.",
+    colors: ["Lavender"],
+    shippingTime: "3 to 4 months",
+    fabricDetails: { Gown: "net", Lehnga: "silk", Dupatta: "net" },
   },
   {
     id: 52,
@@ -909,16 +1031,6 @@ export const products = [
     shippingTime: "8 to 9 weeks",
     fabricDetails: { Peplum: "Ivory", Lehnga: "Ivory", Dupatta: "Olive Green" },
   },
-  
-
-
-
-
-
-
-
-
-
 
 
   
