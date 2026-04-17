@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { FiChevronLeft, FiChevronRight, FiPlay } from 'react-icons/fi';
 import { products } from '../data/products'; 
 import SizeGuidePopup from '../components/SizeGuide/SizeGuidePopup';
 
@@ -45,7 +45,7 @@ const ProductDetail = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           
-          {/* LEFT: IMAGE GALLERY (Stable & Responsive) */}
+          {/* LEFT: IMAGE & VIDEO GALLERY */}
           <div className="lg:col-span-7 w-full">
             <div className="lg:sticky lg:top-28">
               <div className="relative aspect-[3/4] overflow-hidden bg-[#f9f9f9] group">
@@ -55,23 +55,49 @@ const ProductDetail = () => {
                   modules={[Navigation]}
                   className="h-full w-full"
                 >
+                  {/* Image Slides */}
                   {product.images && product.images.map((img, i) => (
                     <SwiperSlide key={i}>
                       <img src={img} className="w-full h-full object-cover select-none" alt={product.name} />
                     </SwiperSlide>
                   ))}
+
+                  {/* Video Slide */}
+                  {product.video && (
+                    <SwiperSlide>
+                      <div className="w-full h-full bg-black">
+                        <video 
+                          src={product.video} 
+                          className="w-full h-full object-cover"
+                          controls
+                          muted
+                          playsInline
+                          autoPlay
+                          loop
+                        />
+                      </div>
+                    </SwiperSlide>
+                  )}
                 </Swiper>
                 
-                <button onClick={() => mainSwiperRef.current?.slidePrev()} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-white/20 hover:bg-white/60 rounded-full hidden md:block transition-all opacity-0 group-hover:opacity-100">
-                  <FiChevronLeft size={22}/>
+                {/* ✅ PROFESSIONAL NAVIGATION ARROWS (Mobile & Desktop) */}
+                <button 
+                  onClick={() => mainSwiperRef.current?.slidePrev()} 
+                  className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 p-2 md:p-3 bg-white/40 md:bg-white/20 hover:bg-white/60 rounded-full transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100"
+                >
+                  <FiChevronLeft className="w-4 h-4 md:w-5 md:h-5 text-gray-800" />
                 </button>
-                <button onClick={() => mainSwiperRef.current?.slideNext()} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-white/20 hover:bg-white/60 rounded-full hidden md:block transition-all opacity-0 group-hover:opacity-100">
-                  <FiChevronRight size={22}/>
+
+                <button 
+                  onClick={() => mainSwiperRef.current?.slideNext()} 
+                  className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 p-2 md:p-3 bg-white/40 md:bg-white/20 hover:bg-white/60 rounded-full transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100"
+                >
+                  <FiChevronRight className="w-4 h-4 md:w-5 md:h-5 text-gray-800" />
                 </button>
               </div>
 
               {/* Thumbnails */}
-              <div className="flex gap-2 mt-4 overflow-x-auto no-scrollbar">
+              <div className="flex gap-2 mt-4 overflow-x-auto no-scrollbar pb-2">
                 {product.images && product.images.map((img, idx) => (
                   <button 
                     key={idx} 
@@ -81,6 +107,18 @@ const ProductDetail = () => {
                     <img src={img} className="w-full h-full object-cover" alt="" />
                   </button>
                 ))}
+
+                {product.video && (
+                  <button 
+                    onClick={() => mainSwiperRef.current?.slideTo(product.images.length)}
+                    className={`w-16 md:w-20 aspect-[3/4] flex-shrink-0 border-2 bg-gray-100 flex items-center justify-center transition-all duration-300 ${activeImgIndex === product.images.length ? 'border-black opacity-100' : 'border-transparent opacity-70'}`}
+                  >
+                    <div className="flex flex-col items-center gap-1 text-gray-600">
+                      <FiPlay size={20} />
+                      <span className="text-[8px] font-bold tracking-widest uppercase">Video</span>
+                    </div>
+                  </button>
+                )}
               </div>
             </div>
           </div>
@@ -93,11 +131,8 @@ const ProductDetail = () => {
               </h1>
             </header>
 
-            {/* CTA AND INFO BLOCK - Pulled closer to Header */}
             <div className="mt-8 space-y-8">
-              
               {isBridal ? (
-                /* BRIDAL LAYOUT: Appointment/Consultation Only */
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a href="https://wa.me/923330601258" target="_blank" rel="noreferrer" className="flex-1">
                     <button className="w-full py-4 border border-black text-[9px] md:text-[10px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition uppercase">
@@ -111,7 +146,6 @@ const ProductDetail = () => {
                   </a>
                 </div>
               ) : (
-                /* OTHER COLLECTIONS: Size Selector & Guide Only */
                 <div className="space-y-6">
                   <button 
                     onClick={() => setIsSizeGuideOpen(true)}
@@ -119,7 +153,6 @@ const ProductDetail = () => {
                   >
                     SIZE GUIDE
                   </button>
-
                   <div className="space-y-4">
                     <p className="text-[11px] font-bold uppercase tracking-widest text-gray-500">Select Size</p>
                     <div className="flex flex-wrap gap-2">
@@ -131,7 +164,6 @@ const ProductDetail = () => {
                 </div>
               )}
 
-              {/* SHARED SPECIFICATIONS (Fabric, Color, Shipping) */}
               <div className="space-y-8 pt-8 border-t border-gray-100">
                 <div>
                   <p className="text-[11px] font-bold uppercase tracking-widest mb-3">Color</p>
