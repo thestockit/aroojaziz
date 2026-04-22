@@ -5,7 +5,7 @@ import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 // ASSET IMPORTS
 import pc1 from '../assets/banner.jpeg';
-import pc2 from '../assets/Banner/pc2.png';
+import pc2 from '../assets/Banner2.png';
 import m1 from '../assets/Banner/m1.webp';
 import m2 from '../assets/Banner/m2.webp'; 
 import m3 from '../assets/Banner/m3.webp';
