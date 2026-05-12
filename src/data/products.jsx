@@ -492,11 +492,10 @@ export const products = [
   },
     {
     id: 51,
-    slug: "bridal-aswad",
+    slug: "aswad",
     name: "ASWAAD",
     isBestSeller: true,
-    category: "bridal",
-    subcategory: "zebaish",
+    category: "formal",
     images: [asward8, asward9, asward10, asward11, asward12, asward1, asward2, asward3, asward4, asward5,],
     description: "A regal black outfit adorned using traditional hand work techniques yet with modern and contemporary elements. A black lehnga choli is made of raw silk, hand embellished using traditional applique work technique, zardosi and cut dana. Eye pleasing hues used in appliques add class and make it ethnic. A stunning organza dupatta with hand embellished pallu and jamawaar facings complete the look",
     colors: ["black"],

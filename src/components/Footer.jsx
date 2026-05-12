@@ -42,10 +42,10 @@ const Footer = () => {
             Follow us
           </h2>
           <div className="flex gap-8 md:gap-6">
-            <a href="https://facebook.com/..." target="_blank" rel="noopener noreferrer" className="text-[#676869] hover:text-[#171717] transition-all hover:-translate-y-1">
+            <a href="https://www.facebook.com/p/Arooj-Aziz-100063690026718/" target="_blank" rel="noopener noreferrer" className="text-[#676869] hover:text-[#171717] transition-all hover:-translate-y-1">
               <FaFacebookF size={16} />
             </a>
-            <a href="https://instagram.com/..." target="_blank" rel="noopener noreferrer" className="text-[#676869] hover:text-[#171717] transition-all hover:-translate-y-1">
+            <a href="https://www.instagram.com/aroojaziz_/" target="_blank" rel="noopener noreferrer" className="text-[#676869] hover:text-[#171717] transition-all hover:-translate-y-1">
               <FaInstagram size={18} />
             </a>
             <a href="https://wa.me/923330601258" target="_blank" rel="noopener noreferrer" className="text-[#676869] hover:text-[#171717] transition-all hover:-translate-y-1">
